@@ -69,20 +69,17 @@
       <source src="video/video.webm" type="video/webm">
     </video>
   </div>
-
   <nav class="header__nav hidden-text">
     <ul>
-      <li><a href="#">Весь спектр клининговых услуг</a></li>
-      <li><a href="#">Почему выбирают нас</a></li>
-      <li><a href="#">Наши довольные клиенты</a></li>
-      <li><a href="#">Напишите нам</a></li>
+      <li><a href="#general">Весь спектр клининговых услуг</a></li>
+      <li><a href="#about">Почему выбирают нас</a></li>
+      <li><a href="#clients">Наши довольные клиенты</a></li>
+      <li><a href="#feedback">Напишите нам</a></li>
     </ul>
   </nav>
 </header>
-
 <main class="main">
-
-  <section class="general-wrap">
+  <section class="general-wrap" id="general">
     <div class="conteiner">
       <div class="general">
         <h1 class="general__tittle">Весь спектр клининговых услуг</h1>
@@ -180,7 +177,7 @@
       </div>
     </div>
   </section>
-  <section class="about-wrap">
+  <section class="about-wrap" id="about">
     <svg class="about-wrap__svg-start">
       <use xlink:href='img/svg/sprite.svg#transition1'></use>
     </svg>
@@ -261,7 +258,7 @@
       <use xlink:href='img/svg/sprite.svg#transition1'></use>
     </svg>
   </section>
-  <section class="clients-wrap">
+  <section class="clients-wrap" id="clients">
     <div class="conteiner">
       <div class="clients">
         <h2 class="clients__tittle">Наши довольные клиенты</h2>
@@ -326,7 +323,7 @@
       </div>
     </div>
   </section>
-  <section class="feedback-wrap">
+  <section class="feedback-wrap" id="feedback">
     <div class="conteiner">
       <div class="feedback">
         <h2 class="feedback__tittle">Напишите нам</h2>
@@ -336,9 +333,9 @@
       </div>
       <form action="#" method="GET" class="feedback__form f-form">
         <input type="text" id="name" placeholder="Как к вам обращаться?" class="f-form__input" name="user-name">
-        <label for="name" class="hidden-text" class="f-form__label">Ваше имя</label>
+        <label for="name" class="hidden-text f-form__label">Ваше имя</label>
         <input type="text" id="phone" placeholder="Номер телефона" class="f-form__input" name="user-phone">
-        <label for="phone" class="hidden-text" class="f-form__label">Номер телефона</label>
+        <label for="phone" class="hidden-text f-form__label">Номер телефона</label>
         <input type="checkbox" id="agree" class="f-form__checkbox" name="personal-date" required>
         <label for="agree" class="f-form__checkbox-text">я согласен(на) на обработку персональных данных</label>
         <button type="submit" class="f-form__btn">Перезвоните мне</button>
