@@ -370,7 +370,9 @@
       width: 100%;
       position: absolute;
       top: 0;
-      right: 100px; }
+      left: 0; }
+    .header__video {
+      width: 100%; }
     .header__tittle {
       font-size: 48px;
       margin: 30px 10%;
@@ -382,8 +384,6 @@
       display: flex;
       gap: 15px;
       color: white; }
-    .header__video {
-      height: 100%; }
     .header__svg {
       display: block;
       width: 100%;

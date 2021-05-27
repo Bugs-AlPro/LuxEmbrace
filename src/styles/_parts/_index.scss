@@ -472,7 +472,10 @@
       width: 100%;
       position: absolute;
       top: 0;
-      right: 100px;
+      left: 0;
+    }
+    &__video {
+      width: 100%;
     }
     &__tittle {
       font-size: 48px;
@@ -488,9 +491,7 @@
       color: white;
   
     }
-    &__video {
-      height: 100%;
-    }
+
     &__svg {
       display: block;
       width: 100%;
