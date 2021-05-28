@@ -22,6 +22,7 @@
 .h-contact__item:hover,
 .h-contact__item:focus {
   transform: scale(1.1);
+  
 }
 .h-contact__item--end:hover,
 .h-contact__item--end:focus {
@@ -30,18 +31,17 @@
 .header__btn:hover,
 .header__btn:focus,
 .general__link:hover,
-.general__link:focus,
-.f-form__btn:hover,
-.f-form__btn:focus {
+.general__link:focus {
   transform: scale(1.05);
 }
-.general__item {
+.g-item {
   border-bottom: 2px solid white;
 }
-.general__item:hover,
-.general__item:focus {
+.g-item:hover,
+.g-item:focus {
   border-bottom: 2px solid rgba(128, 128, 128, 0.199);
   transition: 0;
+  outline: none;
 }
 .glide__bullet:hover {
   background-color: $glide;
@@ -103,7 +103,7 @@
       width: 100%;
       position: absolute;
       top: 0;
-      left: -700px;
+      left: -530px;
     }
     &__tittle {
       font-size: 24px;
@@ -117,14 +117,14 @@
       display: flex;
       gap: 15px;
       color: white;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
     &__video {
       height: 100%;
     }
     &__svg {
       position: absolute;
-      bottom: -60px;
+      bottom: -50px;
       display: block;
       width: 100%;
       background-color: rgba(255, 255, 255, 0);
@@ -202,6 +202,7 @@
       width: 100%;
       color: $color;
       text-align: center;
+      padding-bottom: 10px;
     }
   }
   .about-wrap {
@@ -225,7 +226,7 @@
     &__svg-start {
       position: absolute;
       left: 0;
-      top: -50px;
+      top: -2%;
       display: block;
       width: 100%;
       background-color: transparent;
@@ -235,7 +236,7 @@
     &__svg-end {
       position: absolute;
       left: 0;
-      bottom: -10px;
+      bottom: -2%;
       display: block;
       width: 100%;
       background-color: transparent;
@@ -408,11 +409,13 @@
       align-items: center;
       // height: 50px;
       margin: 0 10px;
+      cursor: pointer;
     }
     &__checkbox-text {
       font-size: 16px;
       display: inline-flex;
       width: 85%;
+      cursor: pointer;
     }
     &__btn {
       border: none;
@@ -426,6 +429,7 @@
       padding: 15px 0;
       border-radius: 12px;
       margin: 30px 0 26px 0;
+      cursor: pointer;
     }
     &__text {
       font-size: 14px;
@@ -616,6 +620,7 @@
       width: 100%;
       color: $color;
       text-align: center;
+      padding-bottom: 10px;
     }
   }
   .about-wrap {
@@ -639,7 +644,7 @@
     &__svg-start {
       position: absolute;
       left: 0;
-      top: -30px;
+      top: -3%;
       display: block;
       width: 100%;
       background-color: transparent;
@@ -649,7 +654,7 @@
     &__svg-end {
       position: absolute;
       left: 0;
-      bottom: -10px;
+      bottom: -3%;
       display: block;
       width: 100%;
       background-color: transparent;
@@ -820,6 +825,7 @@
     &__checkbox-text {
       margin: 10px 0;
       display: inline-block;
+      cursor: pointer;
     }
     &__btn {
       border: none;
@@ -833,6 +839,7 @@
       padding: 15px 0;
       border-radius: 12px;
       margin: 30px 0 26px 0;
+      cursor: pointer;
     }
     &__text {
       font-size: 14px;
@@ -995,7 +1002,7 @@
       gap: 30px;
     }
     &__item {
-      margin-bottom: 80px;
+      margin-bottom: 60px;
       width: 240px;
     }
     &__link {
@@ -1022,6 +1029,7 @@
       width: 100%;
       color: $color;
       text-align: center;
+      padding-bottom: 10px;
     }
   }
   .about-wrap {
@@ -1055,7 +1063,7 @@
     &__svg-end {
       position: absolute;
       left: 0;
-      bottom: -10px;
+      bottom: -2%;
       display: block;
       width: 100%;
       background-color: transparent;
@@ -1228,6 +1236,7 @@
     &__checkbox-text {
       margin: 20px 0;
       display: inline-block;
+      cursor: pointer;
     }
     &__btn {
       border: none;
@@ -1241,6 +1250,7 @@
       padding: 15px 0;
       border-radius: 12px;
       margin: 30px 0 26px 0;
+      cursor: pointer;
     }
     &__text {
       font-size: 14px;
@@ -1403,7 +1413,7 @@
       justify-content: space-between;
     }
     &__item {
-      margin-bottom: 80px;
+      margin-bottom: 60px;
       width: 240px;
     }
     &__link {
@@ -1430,6 +1440,7 @@
       width: 100%;
       color: $color;
       text-align: center;
+      padding-bottom: 10px;
     }
   }
   .about-wrap {
@@ -1632,6 +1643,7 @@
     &__checkbox-text {
       margin: 20px 0;
       display: inline-block;
+      cursor: pointer;
     }
     &__btn {
       border: none;
@@ -1645,6 +1657,7 @@
       padding: 15px 0;
       border-radius: 12px;
       margin: 40px 0 26px 0;
+      cursor: pointer;
     }
     &__text {
       font-size: 14px;
