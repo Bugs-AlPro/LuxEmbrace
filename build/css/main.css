@@ -93,13 +93,13 @@
       bottom: 10%;
       left: 0;
       background-size: cover;
-      background-image: url(/../img/transition1.svg);
+      background-image: url(../img/transition1.svg);
       z-index: 2; }
     .header__backgroud {
-      width: 100%;
+      width: 120%;
       position: absolute;
       top: 0;
-      left: -530px; }
+      left: -510px; }
     .header__tittle {
       font-size: 24px;
       margin: 30px 10%;
@@ -303,9 +303,8 @@
     border-radius: 50%;
     border: none;
     margin: 20px 20px 15px 20px;
-    padding: 5px; }
-  .glide__bullet:hover {
-    background-color: #15ABEB; }
+    padding: 5px;
+    background-color: rgba(128, 128, 128, 0.5); }
   .feedback {
     text-align: center; }
     .feedback__tittle {
@@ -429,7 +428,7 @@
       bottom: 10%;
       left: 0;
       background-size: cover;
-      background-image: url(/../img/transition1.svg);
+      background-image: url(../img/transition1.svg);
       z-index: 2; }
     .header__backgroud {
       width: 100%;
@@ -641,9 +640,8 @@
     border-radius: 50%;
     border: none;
     margin: 20px 20px 15px 20px;
-    padding: 5px; }
-  .glide__bullet:hover {
-    background-color: #15ABEB; }
+    padding: 5px;
+    background-color: rgba(128, 128, 128, 0.5); }
   .feedback {
     text-align: center; }
     .feedback__tittle {
@@ -761,7 +759,7 @@
       bottom: 10%;
       left: 0;
       background-size: cover;
-      background-image: url(/../img/transition1.svg);
+      background-image: url(../img/transition1.svg);
       z-index: 2; }
     .header__backgroud {
       width: 100%;
@@ -974,7 +972,8 @@
     border-radius: 50%;
     border: none;
     margin: 20px 20px 15px 20px;
-    padding: 5px; }
+    padding: 5px;
+    background-color: rgba(128, 128, 128, 0.5); }
   .feedback {
     text-align: center; }
     .feedback__tittle {
@@ -1095,7 +1094,7 @@
       bottom: 10%;
       left: 0;
       background-size: cover;
-      background-image: url(/../img/transition1.svg);
+      background-image: url(../img/transition1.svg);
       z-index: 2; }
     .header__backgroud {
       width: 100%;
@@ -1296,7 +1295,8 @@
     border-radius: 50%;
     border: none;
     margin: 20px 20px 15px 20px;
-    padding: 5px; }
+    padding: 5px;
+    background-color: rgba(128, 128, 128, 0.5); }
   .glide__bullet:hover {
     background-color: #15ABEB; }
   .feedback {

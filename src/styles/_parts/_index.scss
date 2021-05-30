@@ -106,14 +106,14 @@
       bottom: 10%;
       left: 0;
       background-size: cover;
-      background-image: url(/../img/transition1.svg);
+      background-image: url(../img/transition1.svg);
       z-index: 2;
     }
     &__backgroud {
-      width: 100%;
+      width: 120%;
       position: absolute;
       top: 0;
-      left: -530px;
+      left: -510px;
     }
     &__tittle {
       font-size: 24px;
@@ -378,10 +378,8 @@
       border: none;
       margin: 20px 20px 15px 20px;
       padding: 5px;
-    }    
-    &__bullet:hover {
-      background-color: $glide;
-    }
+      background-color: rgba(128, 128, 128, 0.5);
+    } 
   }
   .feedback {
     text-align: center;
@@ -530,7 +528,7 @@
       bottom: 10%;
       left: 0;
       background-size: cover;
-      background-image: url(/../img/transition1.svg);
+      background-image: url(../img/transition1.svg);
       z-index: 2;
     }
     &__backgroud {
@@ -805,10 +803,8 @@
       border: none;
       margin: 20px 20px 15px 20px;
       padding: 5px;
-    }    
-    &__bullet:hover {
-      background-color: $glide;
-    }
+      background-color: rgba(128, 128, 128, 0.5);
+    } 
   }
   .feedback {
     text-align: center;
@@ -950,7 +946,7 @@
       bottom: 10%;
       left: 0;
       background-size: cover;
-      background-image: url(/../img/transition1.svg);
+      background-image: url(../img/transition1.svg);
       z-index: 2;
     }
     &__backgroud {
@@ -1226,6 +1222,7 @@
       border: none;
       margin: 20px 20px 15px 20px;
       padding: 5px;
+      background-color: rgba(128, 128, 128, 0.5);
     }    
 
   }
@@ -1372,7 +1369,7 @@
       bottom: 10%;
       left: 0;
       background-size: cover;
-      background-image: url(/../img/transition1.svg);
+      background-image: url(../img/transition1.svg);
       z-index: 2;
     }
     &__backgroud {
@@ -1645,6 +1642,7 @@
       border: none;
       margin: 20px 20px 15px 20px;
       padding: 5px;
+      background-color: rgba(128, 128, 128, 0.5);
     }    
     &__bullet:hover {
       background-color: $glide;
