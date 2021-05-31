@@ -59,7 +59,7 @@
 
   </div>
   <div class="header__backgroud">
-    <video preload="auto" autoplay loop poster="img/start-video@1x.jpg" muted class="header__video">
+    <video preload="auto" loop autoplay poster="img/start-video@1x.jpg" muted class="header__video">
       <source src="video/video.mp4" type="video/mp4">
       <source src="video/video.ogv" type="video/ogg">
       <source src="video/video.webm" type="video/webm">
@@ -362,8 +362,10 @@
         <label for="name" class="hidden-text f-form__label">Ваше имя</label>
         <input type="text" id="phone" placeholder="Номер телефона" class="f-form__input" name="user-phone">
         <label for="phone" class="hidden-text f-form__label">Номер телефона</label>
-        <input type="checkbox" id="agree" class="f-form__checkbox" name="personal-date" required>
-        <label for="agree" class="f-form__checkbox-text">я согласен(на) на обработку персональных данных</label>
+        <label for="agree" class="f-form__checkbox-text">я согласен(на) на обработку персональных данных
+          <input type="checkbox" id="agree" class="hidden-text f-form__checkbox" name="personal-date" required>
+          <span class="f-form__check"></span>
+        </label>
         <button type="submit" class="f-form__btn">Перезвоните мне</button>
         <span class="f-form__text">Заявка отправлена. Спасибо за обращение! Мы перезвоним вам в течении 5-10 мин.</span>
       </form>

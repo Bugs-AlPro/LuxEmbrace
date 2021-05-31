@@ -65,16 +65,16 @@
   }
   .hidden-text {
     position: absolute;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    clip-path: inset(100%);
     width: 1px;
     height: 1px;
     margin: -1px;
     padding: 0px;
-    white-space: nowrap;
     border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    white-space: nowrap;
     font-size: 1em;
+    overflow: hidden;
   }
   ul, li, p {
     list-style: none;
@@ -82,7 +82,7 @@
     margin: 0;
     }
   .conteiner {
-    margin: auto;
+    margin: 0 auto;
     padding: 0 30px;
   }
   .header {
@@ -98,22 +98,26 @@
       justify-content: space-between;
       background-color: hsla(183, 100%, 7%, 0.6);
       align-items: center;
+      padding-bottom: 100px;
     }
     &__cover::after {
       content: "";
+      position: absolute;
       width: 100%;
       height: 100px;
-      bottom: 10%;
+      bottom: -1px;
       left: 0;
       background-size: cover;
       background-image: url(../img/transition1.svg);
       z-index: 2;
     }
     &__backgroud {
-      width: 120%;
+      width: 100%;
       position: absolute;
-      top: 0;
-      left: -510px;
+      top: -50px;
+    }
+    &__video {
+      height: 100%;
     }
     &__tittle {
       font-size: 24px;
@@ -127,17 +131,6 @@
       display: flex;
       gap: 15px;
       color: white;
-    }
-    &__video {
-      height: 100%;
-    }
-    &__svg {
-      position: absolute;
-      bottom: -50px;
-      display: block;
-      width: 100%;
-      background-color: rgba(255, 255, 255, 0);
-      fill: white;
     }
   }
   .h-contact {
@@ -411,18 +404,27 @@
       border: 2px solid #EDEDED;
       color: #AAB7BC;
     }
-    &__checkbox {
-      display: inline-flex;
-      align-items: center;
-      // height: 50px;
-      margin: 0 10px;
-      cursor: pointer;
+    &__checkbox:checked + &__check {
+      background-image: radial-gradient(circle, $background, $glide);
+    }
+    &__checkbox:focus + &__check {
+      border: 1px solid $glide;
     }
     &__checkbox-text {
       font-size: 16px;
-      display: inline-flex;
-      width: 85%;
+      line-height: 24px;
+      padding-left: 35px;
       cursor: pointer;
+      position: relative;
+    }
+    &__check {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border: 2px solid #EDEDED;
+      border-radius: 6px;
+      left: 0;
+      bottom: -20%;
     }
     &__btn {
       border: none;
@@ -520,13 +522,14 @@
       justify-content: space-between;
       background-color: hsla(183, 100%, 7%, 0.6);
       align-items: center;
+      padding-bottom: 100px;
     }
     &__cover::after {
       content: "";
+      position: absolute;
+      bottom: -1px;
       width: 100%;
       height: 100px;
-      bottom: 10%;
-      left: 0;
       background-size: cover;
       background-image: url(../img/transition1.svg);
       z-index: 2;
@@ -534,8 +537,10 @@
     &__backgroud {
       width: 100%;
       position: absolute;
-      top: 0;
-      right: 300px;
+      top: -50px;
+    }
+    &__video {
+      height: 100%;
     }
     &__logo {
       margin-top: 20px;
@@ -556,14 +561,14 @@
     &__video {
       height: 100%;
     }
-    &__svg {
-      position: absolute;
-      bottom: -30px;
-      display: block;
-      width: 100%;
-      background-color: rgba(255, 255, 255, 0);
-      fill: white;
-    }
+    // &__svg {
+    //   position: absolute;
+    //   bottom: -30px;
+    //   display: block;
+    //   width: 100%;
+    //   background-color: rgba(255, 255, 255, 0);
+    //   fill: white;
+    // }
   }
   .h-contact {
     width: 100%;
@@ -607,7 +612,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 40px;
-      justify-content: space-between;
+      justify-content: space-around;
     }
     &__item {
       width: 240px;
@@ -836,10 +841,26 @@
       border: 2px solid #EDEDED;
       color: #AAB7BC;
     }
+    &__checkbox:checked + &__check {
+      background-image: radial-gradient(circle, $background, $glide);
+    }
+    &__checkbox:focus + &__check {
+      border: 1px solid $glide;
+    }
     &__checkbox-text {
-      margin: 10px 0;
-      display: inline-block;
+      font-size: 16px;
+      padding-left: 35px;
       cursor: pointer;
+      position: relative;
+    }
+    &__check {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border: 2px solid #EDEDED;
+      border-radius: 6px;
+      left: 0;
+      top: 0;
     }
     &__btn {
       border: none;
@@ -922,8 +943,8 @@
     }
   
   .conteiner {
-    margin: auto;
-    padding: 0 100px;
+    margin: 0 auto;
+    padding: 0 70px;
   }
   .header {
     position: relative;
@@ -938,12 +959,14 @@
       justify-content: space-between;
       background-color: hsla(183, 100%, 7%, 0.6);
       align-items: center;
+      padding-bottom: 100px;
     }
     &__cover::after {
       content: "";
+      position: absolute;
       width: 100%;
       height: 100px;
-      bottom: 10%;
+      bottom: -1px;
       left: 0;
       background-size: cover;
       background-image: url(../img/transition1.svg);
@@ -952,8 +975,10 @@
     &__backgroud {
       width: 100%;
       position: absolute;
-      top: 0;
-      right: 100px;
+      top: -50px;
+    }
+    &__video {
+      height: 100%;
     }
     &__tittle {
       font-size: 40px;
@@ -1023,6 +1048,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
+      justify-content: space-around;
     }
     &__item {
       margin-bottom: 60px;
@@ -1257,10 +1283,27 @@
       border: 2px solid #EDEDED;
       color: #AAB7BC;
     }
+    &__checkbox:checked + &__check {
+      background-image: radial-gradient(circle, $background, $glide);
+    }
+    &__checkbox:focus + &__check {
+      border: 1px solid $glide;
+    }
     &__checkbox-text {
-      margin: 20px 0;
-      display: inline-block;
+      font-size: 16px;
+      line-height: 24px;
+      padding-left: 35px;
       cursor: pointer;
+      position: relative;
+    }
+    &__check {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border: 2px solid #EDEDED;
+      border-radius: 6px;
+      left: 0;
+      top: 0;
     }
     &__btn {
       border: none;
@@ -1343,15 +1386,14 @@
     margin: 0;
     }
   .conteiner {
-    margin: auto;
-    padding: 0 100px;
+    margin: 0 auto;
+    padding: 0 70px;
     max-width: 1400px;
   }
   .header {
     position: relative;
     color: white;
     overflow: hidden;
-
     &__cover {
       width: 100%;
       z-index: 2;
@@ -1361,12 +1403,14 @@
       justify-content: space-between;
       background-color: hsla(183, 100%, 7%, 0.6);
       align-items: center;    
+      padding-bottom: 100px;
     }
     &__cover::after {
       content: "";
+      position: absolute;
       width: 100%;
       height: 100px;
-      bottom: 10%;
+      bottom: -1px;
       left: 0;
       background-size: cover;
       background-image: url(../img/transition1.svg);
@@ -1375,12 +1419,13 @@
     &__backgroud {
       width: 100%;
       position: absolute;
-      top: 0;
+      top: -50px;
       left: 0;
     }
     &__video {
       width: 100%;
     }
+    
     &__tittle {
       font-size: 48px;
       margin: 30px 10%;
@@ -1443,8 +1488,8 @@
     &__list {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-around;
       gap: 30px;
-      justify-content: space-between;
     }
     &__item {
       margin-bottom: 60px;
@@ -1679,10 +1724,27 @@
       border: 2px solid #EDEDED;
       color: #AAB7BC;
     }
+    &__checkbox:checked + &__check {
+      background-image: radial-gradient(circle, $background, $glide);
+    }
+    &__checkbox:focus + &__check {
+      border: 1px solid $glide;
+    }
     &__checkbox-text {
-      margin: 20px 0;
-      display: inline-block;
+      font-size: 16px;
+      line-height: 24px;
+      padding-left: 35px;
       cursor: pointer;
+      position: relative;
+    }
+    &__check {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border: 2px solid #EDEDED;
+      border-radius: 6px;
+      left: 0;
+      top: 0;
     }
     &__btn {
       border: none;
