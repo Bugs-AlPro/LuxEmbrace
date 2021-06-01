@@ -19,36 +19,19 @@
   padding: 0;
   margin: 0;
 }
-.h-contact__item:hover,
-.h-contact__item:focus {
-  transform: scale(1.1);
-  
-}
-.h-contact__item--end:hover,
-.h-contact__item--end:focus {
-  transform: scale(1);
+.h-contact__link:hover,
+.h-contact__link:focus {
+  color: $hover;
 }
 .header__btn:hover,
 .header__btn:focus,
 .general__link:hover,
 .general__link:focus {
-  transform: scale(1.05);
+  background-color: $hover;
 }
-.g-item {
-  border-bottom: 2px solid white;
-}
-.g-item:hover,
-.g-item:focus {
-  border-bottom: 2px solid rgba(128, 128, 128, 0.199);
-  transition: 0;
-  outline: none;
-}
-.glide__bullet:hover {
-  background-color: $glide;
-  transform: scale(1.1);
-}
-.glide__arrow:hover {
-  box-shadow: 0 0 1px 1px $glide;
+.f-form__btn:hover,
+.f-form__btn:focus {
+  background-color: $hover;
 }
 @include media-down(md) {
   *, *::after, *::before {
@@ -165,7 +148,7 @@
   }
   .general {
     text-align: center;
-    &__tittle {
+    &__title {
       font-size: 26px;
       font-weight: 600;
       text-align: center;
@@ -176,9 +159,6 @@
       flex-wrap: wrap;
       gap: 40px;
       justify-content: space-around;
-    }
-    &__item {
-      width: 240px;
     }
     &__link {
       font-weight: 600;
@@ -192,7 +172,7 @@
     }
   }
   .g-item {
-    width: 100%;
+    width: 240px;
     display: block;
     &__img {
       border-radius: 20px;
@@ -247,7 +227,7 @@
   }
   .about {
     padding-top: 50px;
-    &__tittle {
+    &__title {
       font-size: 26px;
       font-weight: 600;
       text-align: center;
@@ -269,7 +249,7 @@
       text-align: center;
       padding: 15px;
     }
-    &__tittle {
+    &__title {
       font-size: 24px;
       font-weight: 600;
     }
@@ -280,33 +260,35 @@
     }
   }
   .clients {
-    &__tittle {
+    margin: 0 80px;
+    &__title {
       font-size: 26px;
       font-weight: 600;
       text-align: center;
-      margin: 50px 0;
+      margin: 40px 0;
     }
   }
   .c-list {
-    position: absolute;
-    top: 0;
-    left: 60px;
-    right: 70px;
+    position: relative;
     display: flex;
-    overflow: hidden;
     &__item {
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     &__img {
       border-radius: 20px;
-      margin: 0 12px;
       width: 160px;
     }
-    &__tittle {
-      margin-top: 15px;
+    &__title {
+      margin: 15px 0 0 0;
       white-space: normal;
       font-size: 18px;
       font-weight: 600; 
+      width: 160px;
+      display: inline-block;
+      text-align: center;
     }
     &__type {
       margin-top: 10px;
@@ -314,69 +296,9 @@
       font-weight: 400;
     }
   }
-  .glide {
-    &__track {
-      position: relative;
-    }
-    &__arrows {
-      height: 270px;
-      display: flex;
-      justify-content: space-between;
-      margin: 0 20px;
-    }
-    &__arrow {
-      position: relative;
-      padding: 0;
-      margin-top: 70px;
-      background: inherit;
-      border: none;
-      cursor: pointer;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      border: 2px solid currentColor;
-      color: $glide;
-    }
-    &__arrow--right::before {
-      content: "";
-      top: 30%;
-      left: 30%;
-      transform: rotate(45deg);
-      position: absolute;
-      border-top: 3px solid currentColor;
-      border-right: 3px solid currentColor;
-      width: 13px;
-      height: 13px;
-    }
-    &__arrow--left::before {
-      content: "";
-      top: 30%;
-      left: 40%;
-      transform: rotate(-135deg);
-      position: absolute;
-      border-top: 3px solid currentColor;
-      border-right: 3px solid currentColor;
-      width: 13px;
-      height: 13px;
-    }
-    &__bullets {
-      display: flex;
-      justify-content: center;
-    }
-    &__bullet {
-      cursor: pointer;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      border: none;
-      margin: 20px 20px 15px 20px;
-      padding: 5px;
-      background-color: rgba(128, 128, 128, 0.5);
-    } 
-  }
   .feedback {
     text-align: center;
-    &__tittle {
+    &__title {
       font-size: 26px;
       font-weight: 600;
       text-align: center;
@@ -389,9 +311,12 @@
   }
   }
   .f-form {
+    ::-webkit-input-placeholder {
+      color: #AAB7BC;
+    }
     text-align: center;
     margin: 0 auto;
-    color: #536268;
+
     &__input {
       display: block;
       text-align: center;
@@ -404,11 +329,14 @@
       border: 2px solid #EDEDED;
       color: #AAB7BC;
     }
+    &__input:focus {
+      outline: 1px solid $hover;
+    }
     &__checkbox:checked + &__check {
-      background-image: radial-gradient(circle, $background, $glide);
+      background-image: radial-gradient(circle, $background, $hover);
     }
     &__checkbox:focus + &__check {
-      border: 1px solid $glide;
+      border: 1px solid $hover;
     }
     &__checkbox-text {
       font-size: 16px;
@@ -416,6 +344,7 @@
       padding-left: 35px;
       cursor: pointer;
       position: relative;
+      color: #536268;
     }
     &__check {
       position: absolute;
@@ -424,7 +353,7 @@
       border: 2px solid #EDEDED;
       border-radius: 6px;
       left: 0;
-      bottom: -20%;
+      top: 0;
     }
     &__btn {
       border: none;
@@ -602,7 +531,7 @@
   }
   .general {
     text-align: center;
-    &__tittle {
+    &__title {
       font-size: 38px;
       font-weight: 600;
       text-align: center;
@@ -613,9 +542,6 @@
       flex-wrap: wrap;
       gap: 40px;
       justify-content: space-around;
-    }
-    &__item {
-      width: 240px;
     }
     &__link {
       font-weight: 700;
@@ -629,8 +555,8 @@
     }
   }
   .g-item {
-    width: 100%;
     display: block;
+    width: 240px;
     &__img {
       border-radius: 24px;
     }
@@ -684,7 +610,7 @@
   }
   .about {
     padding-top: 70px;
-    &__tittle {
+    &__title {
       font-size: 38px;
       font-weight: 600;
       text-align: center;
@@ -706,7 +632,7 @@
       text-align: center;
       padding: 15px;
     }
-    &__tittle {
+    &__title {
       font-size: 30px;
       font-weight: 600;
     }
@@ -717,7 +643,8 @@
     }
   }
   .clients {
-    &__tittle {
+    margin: 0 90px;
+    &__title {
       font-size: 38px;
       font-weight: 600;
       text-align: center;
@@ -725,25 +652,23 @@
     }
   }
   .c-list {
-    position: absolute;
-    top: 0;
-    left: 80px;
-    right: 110px;
+    position: relative;
     display: flex;
-    overflow: hidden;
     &__item {
       text-align: center;
     }
     &__img {
       border-radius: 24px;
-      margin: 0 12px;
       width: 170px;
     }
-    &__tittle {
-      margin-top: 15px;
+    &__title {
+      margin: 15px 0 0 0;
       white-space: normal;
       font-size: 18px;
       font-weight: 600; 
+      width: 170px;
+      display: inline-block;
+      text-align: center;
     }
     &__type {
       margin-top: 10px;
@@ -751,69 +676,9 @@
       font-weight: 400;
     }
   }
-  .glide {
-    &__track {
-      position: relative;
-    }
-    &__arrows {
-      height: 290px;
-      display: flex;
-      justify-content: space-between;
-      margin: 0 30px;
-    }
-    &__arrow {
-      position: relative;
-      padding: 0;
-      margin-top: 70px;
-      background: inherit;
-      border: none;
-      cursor: pointer;
-      width: 47px;
-      height: 47px;
-      border-radius: 50%;
-      border: 2px solid currentColor;
-      color: $glide;
-    }
-    &__arrow--right::before {
-      content: "";
-      top: 30%;
-      left: 30%;
-      transform: rotate(45deg);
-      position: absolute;
-      border-top: 3px solid currentColor;
-      border-right: 3px solid currentColor;
-      width: 15px;
-      height: 15px;
-    }
-    &__arrow--left::before {
-      content: "";
-      top: 30%;
-      left: 40%;
-      transform: rotate(-135deg);
-      position: absolute;
-      border-top: 3px solid currentColor;
-      border-right: 3px solid currentColor;
-      width: 15px;
-      height: 15px;
-    }
-    &__bullets {
-      display: flex;
-      justify-content: center;
-    }
-    &__bullet {
-      cursor: pointer;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      border: none;
-      margin: 20px 20px 15px 20px;
-      padding: 5px;
-      background-color: rgba(128, 128, 128, 0.5);
-    } 
-  }
   .feedback {
     text-align: center;
-    &__tittle {
+    &__title {
       font-size: 38px;
       font-weight: 600;
       text-align: center;
@@ -828,7 +693,9 @@
   .f-form {
     text-align: center;
     margin: 0 auto;
-    color: #536268;
+    ::-webkit-input-placeholder {
+      color: #AAB7BC;
+    }
     &__input {
       display: block;
       text-align: center;
@@ -841,17 +708,21 @@
       border: 2px solid #EDEDED;
       color: #AAB7BC;
     }
+    &__input:focus {
+      outline: 1px solid $hover;
+    }
     &__checkbox:checked + &__check {
-      background-image: radial-gradient(circle, $background, $glide);
+      background-image: radial-gradient(circle, $background, $hover);
     }
     &__checkbox:focus + &__check {
-      border: 1px solid $glide;
+      border: 1px solid $hover;
     }
     &__checkbox-text {
       font-size: 16px;
       padding-left: 35px;
       cursor: pointer;
       position: relative;
+      color: #536268;
     }
     &__check {
       position: absolute;
@@ -941,7 +812,6 @@
     padding: 0;
     margin: 0;
     }
-  
   .conteiner {
     margin: 0 auto;
     padding: 0 70px;
@@ -1038,7 +908,7 @@
   }
   .general {
     text-align: center;
-    &__tittle {
+    &__title {
       font-size: 50px;
       font-weight: 400;
       text-align: center;
@@ -1049,10 +919,6 @@
       flex-wrap: wrap;
       gap: 30px;
       justify-content: space-around;
-    }
-    &__item {
-      margin-bottom: 60px;
-      width: 240px;
     }
     &__link {
       font-weight: 700;
@@ -1068,6 +934,8 @@
   .g-item {
     width: 100%;
     display: block;
+    margin-bottom: 50px;
+    width: 240px;
     &__img {
       border-radius: 24px;
     }
@@ -1121,7 +989,7 @@
   }
   .about {
     padding-top: 70px;
-    &__tittle {
+    &__title {
       font-size: 50px;
       font-weight: 400;
       text-align: center;
@@ -1146,7 +1014,7 @@
       text-align: center;
       padding: 15px;
     }
-    &__tittle {
+    &__title {
       font-size: 36px;
       font-weight: 600;
     }
@@ -1157,7 +1025,8 @@
     }
   }
   .clients {
-    &__tittle {
+    margin: 0 100px;
+    &__title {
       font-size: 50px;
       font-weight: 400;
       text-align: center;
@@ -1165,25 +1034,23 @@
     }
   }
   .c-list {
-    position: absolute;
-    top: 0;
-    left: 100px;
-    right: 130px;
+    position: relative;
     display: flex;
-    overflow: hidden;
     &__item {
       text-align: center;
     }
     &__img {
       border-radius: 24px;
-      margin: 0 20px;
-      width: 220px;
+      width: 180px;
     }
-    &__tittle {
-      margin-top: 20px;
+    &__title {
+      margin: 20px 0 0 0;
       white-space: normal;
       font-size: 22px;
       font-weight: 600; 
+      width: 190px;
+      display: inline-block;
+      text-align: center;
     }
     &__type {
       margin-top: 10px;
@@ -1191,70 +1058,9 @@
       font-weight: 400;
     }
   }
-  .glide {
-    &__track {
-      position: relative;
-    }
-    &__arrows {
-      height: 340px;
-      display: flex;
-      justify-content: space-between;
-      margin: 0 50px;
-    }
-    &__arrow {
-      position: relative;
-      padding: 0;
-      margin-top: 100px;
-      background: inherit;
-      border: none;
-      cursor: pointer;
-      width: 47px;
-      height: 47px;
-      border-radius: 50%;
-      border: 2px solid currentColor;
-      color: $glide;
-    }
-    &__arrow--right::before {
-      content: "";
-      top: 30%;
-      left: 30%;
-      transform: rotate(45deg);
-      position: absolute;
-      border-top: 3px solid currentColor;
-      border-right: 3px solid currentColor;
-      width: 15px;
-      height: 15px;
-    }
-    &__arrow--left::before {
-      content: "";
-      top: 30%;
-      left: 40%;
-      transform: rotate(-135deg);
-      position: absolute;
-      border-top: 3px solid currentColor;
-      border-right: 3px solid currentColor;
-      width: 15px;
-      height: 15px;
-    }
-    &__bullets {
-      display: flex;
-      justify-content: center;
-    }
-    &__bullet {
-      cursor: pointer;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      border: none;
-      margin: 20px 20px 15px 20px;
-      padding: 5px;
-      background-color: rgba(128, 128, 128, 0.5);
-    }    
-
-  }
   .feedback {
     text-align: center;
-    &__tittle {
+    &__title {
       font-size: 50px;
       font-weight: 400;
       text-align: center;
@@ -1270,7 +1076,10 @@
     text-align: center;
     margin: 0 auto;
     width: 650px;
-    color: #536268;
+
+    ::-webkit-input-placeholder {
+      color: #AAB7BC;
+    }
     &__input {
       display: block;
       text-align: center;
@@ -1283,11 +1092,14 @@
       border: 2px solid #EDEDED;
       color: #AAB7BC;
     }
+    &__input:focus {
+      outline: 1px solid $hover;
+    }
     &__checkbox:checked + &__check {
-      background-image: radial-gradient(circle, $background, $glide);
+      background-image: radial-gradient(circle, $background, $hover);
     }
     &__checkbox:focus + &__check {
-      border: 1px solid $glide;
+      border: 1px solid $hover;
     }
     &__checkbox-text {
       font-size: 16px;
@@ -1295,6 +1107,7 @@
       padding-left: 35px;
       cursor: pointer;
       position: relative;
+      color: #536268;
     }
     &__check {
       position: absolute;
@@ -1458,7 +1271,9 @@
       margin-right: 38px;
     }
     &__link {
+      display: inline-block;
       color: white;
+      height: 100%;
     }
     &__item--end {
       margin: 0;
@@ -1479,7 +1294,7 @@
   }
   .general {
     text-align: center;
-    &__tittle {
+    &__title {
       font-size: 64px;
       font-weight: 400;
       text-align: center;
@@ -1490,10 +1305,6 @@
       flex-wrap: wrap;
       justify-content: space-around;
       gap: 30px;
-    }
-    &__item {
-      margin-bottom: 60px;
-      width: 240px;
     }
     &__link {
       font-weight: 700;
@@ -1507,8 +1318,9 @@
     }
   }
   .g-item {
-    width: 100%;
     display: block;
+    margin-bottom: 60px;
+    width: 240px;
     &__img {
       border-radius: 24px;
     }
@@ -1554,7 +1366,7 @@
     }
   }
   .about {
-    &__tittle {
+    &__title {
       font-size: 64px;
       font-weight: 400;
       text-align: center;
@@ -1579,7 +1391,7 @@
       align-self: center;
       // width: 600px;
     }
-    &__tittle {
+    &__title {
       font-size: 36px;
       font-weight: 600;
     }
@@ -1597,7 +1409,9 @@
     margin: 0 auto;
   }
   .clients {
-    &__tittle {
+    position: relative;
+    margin: 0 100px;
+    &__title {
       font-size: 64px;
       font-weight: 400;
       text-align: center;
@@ -1605,24 +1419,22 @@
     }
   }
   .c-list {
-    position: absolute;
-    top: 0;
-    left: 100px;
-    right: 130px;
+    position: relative;
     display: flex;
-    overflow: hidden;
     &__item {
       text-align: center;
     }
     &__img {
       border-radius: 24px;
-      margin: 0 30px;
     }
-    &__tittle {
+    &__title {
       margin-top: 25px;
       white-space: normal;
       font-size: 24px;
       font-weight: 600; 
+      width: 240px;
+      display: inline-block;
+      text-align: center;
     }
     &__type {
       margin-top: 10px;
@@ -1630,72 +1442,9 @@
       font-weight: 400;
     }
   }
-  .glide {
-    &__track {
-      position: relative;
-    }
-    &__arrows {
-      height: 370px;
-      display: flex;
-      justify-content: space-between;
-      margin: 0 50px;
-    }
-    &__arrow {
-      position: relative;
-      padding: 0;
-      margin-top: 100px;
-      background: inherit;
-      border: none;
-      cursor: pointer;
-      width: 47px;
-      height: 47px;
-      border-radius: 50%;
-      border: 2px solid currentColor;
-      color: $glide;
-    }
-    &__arrow--right::before {
-      content: "";
-      top: 30%;
-      left: 30%;
-      transform: rotate(45deg);
-      position: absolute;
-      border-top: 3px solid currentColor;
-      border-right: 3px solid currentColor;
-      width: 15px;
-      height: 15px;
-    }
-    &__arrow--left::before {
-      content: "";
-      top: 30%;
-      left: 40%;
-      transform: rotate(-135deg);
-      position: absolute;
-      border-top: 3px solid currentColor;
-      border-right: 3px solid currentColor;
-      width: 15px;
-      height: 15px;
-    }
-    &__bullets {
-      display: flex;
-      justify-content: center;
-    }
-    &__bullet {
-      cursor: pointer;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      border: none;
-      margin: 20px 20px 15px 20px;
-      padding: 5px;
-      background-color: rgba(128, 128, 128, 0.5);
-    }    
-    &__bullet:hover {
-      background-color: $glide;
-    }
-  }
   .feedback {
     text-align: center;
-    &__tittle {
+    &__title {
       font-size: 64px;
       font-weight: 400;
       text-align: center;
@@ -1711,7 +1460,9 @@
     text-align: center;
     margin: 0 auto;
     width: 650px;
-    color: #536268;
+    ::-webkit-input-placeholder {
+      color: #AAB7BC;
+    }
     &__input {
       display: block;
       text-align: center;
@@ -1724,11 +1475,14 @@
       border: 2px solid #EDEDED;
       color: #AAB7BC;
     }
+    &__input:focus {
+      outline: 1px solid $hover;
+    }
     &__checkbox:checked + &__check {
-      background-image: radial-gradient(circle, $background, $glide);
+      background-image: radial-gradient(circle, $background, $hover);
     }
     &__checkbox:focus + &__check {
-      border: 1px solid $glide;
+      border: 1px solid $hover;
     }
     &__checkbox-text {
       font-size: 16px;
@@ -1736,6 +1490,7 @@
       padding-left: 35px;
       cursor: pointer;
       position: relative;
+      color: #536268;
     }
     &__check {
       position: absolute;

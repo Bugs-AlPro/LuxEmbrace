@@ -1,0 +1,103 @@
+.tns-inner {
+  overflow: hidden;
+}
+.tns-visually-hidden {
+  display: none;
+}
+.tns-controls {
+  position: relative;
+}
+
+.tns-controls button {
+  position: absolute;
+  border: none;
+  top: 100px;
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  background: inherit;
+  cursor: pointer;
+  display: inline-block;
+  color: $glide;
+}
+@include media-only(lg) {
+  .tns-controls button {
+    top: 70px;
+  }
+}
+@include media-only(md) {
+  .tns-controls button {
+    top: 70px;
+  }
+}
+@include media-down(md) {
+  .tns-controls button {
+    top: 50px;
+  }
+}
+.tns-controls button:nth-child(1) {
+  left: -60px;
+}
+.tns-controls button:nth-child(2) {
+  right: -60px;
+}
+.tns-controls button:nth-child(2)::before {
+  content: "";
+  top: 30%;
+  left: 30%;
+  transform: rotate(45deg);
+  position: absolute;
+  border-top: 3px solid currentColor;
+  border-right: 3px solid currentColor;
+  width: 15px;
+  height: 15px;
+}
+.tns-controls button:nth-child(1)::before {
+  content: "";
+  top: 30%;
+  left: 40%;
+  transform: rotate(-135deg);
+  position: absolute;
+  border-top: 3px solid currentColor;
+  border-right: 3px solid currentColor;
+  width: 15px;
+  height: 15px;
+}
+.tns-controls button:hover {
+  box-shadow: 0 0 1px 1px $glide;
+}
+.tns-controls button:disabled {
+  color: #EDEDED;
+  box-shadow: 0 0 1px 1px #EDEDED;
+}
+.tns-nav {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.tns-nav button {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  margin: 20px 20px 15px 20px;
+  padding: 5px;
+}
+@include media-down(md) {
+  .tns-nav button {
+    margin: 10px 4px 15px 4px;
+    padding: 0px;
+    width: 10px;
+    height: 10px;
+  }
+}
+.tns-nav button:hover,
+.tns-nav button:focus {
+  background-color: $glide;
+  transform: scale(1.1);
+}
+.tns-nav-active {
+  background-color: $glide;
+}  

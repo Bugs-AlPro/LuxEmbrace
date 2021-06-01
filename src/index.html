@@ -1,34 +1,67 @@
 {% set tittle = 'LuxEmbrace' %}
 {% extends "templates/default.html" %}
+{% import "includes/macros.html" as variable %}
+
+{% set social = [
+{href: "#", svgname: "whatsapp"},
+{href: "#", svgname: "telegramm"},
+{href: "#", svgname: "instagramm"}
+]%}
+
+{% set gItem = [
+{srcImg: "img/type1-elit", text: "Элитная недвижимость", alt: "Элитный дом"},
+{srcImg: "img/type2-admin", text: "Административные здания", alt: "Административные здания"},
+{srcImg: "img/type3-home", text: "Квартиры и офисы", alt: "Квартиры и офисы"},
+{srcImg: "img/type4-meet", text: "Обслуживание мероприятий", alt: "Подготовка к мероприятию"},
+{srcImg: "img/type5-outside", text: "Мытье фасадов", alt: "Мытье фасадов"},
+{srcImg: "img/type6-window", text: "Окна и витражи", alt: "Окна и витражи"},
+{srcImg: "img/type7-cover", text: "Полы и стены", alt: "Полы и стены"},
+{srcImg: "img/type8-floor2", text: "Ковры и покрытия", alt: "Ковры и покрытия"}
+]%}
+
+{% set clients = [
+{srcImg: "img/client1", title: "Название клиента", type: "Элитная недвижимость", alt: "Элитный дом"},
+{srcImg: "img/client2", title: "Длинное Название клиента", type: "Административные здания", alt: "Административные
+здания"},
+{srcImg: "img/client3", title: "Название клиента", type: "Квартиры и офисы", alt: "Квартиры и офисы"},
+{srcImg: "img/client4", title: "Длинное Название клиента", type: "Обслуживание мероприятий", alt: "Подготовка к
+мероприятию"},
+{srcImg: "img/client1", title: "Название клиента", type: "Элитная недвижимость", alt: "Элитный дом"},
+{srcImg: "img/client2", title: "Длинное Название клиента", type: "Административные здания", alt: "Административные
+здания"},
+{srcImg: "img/client3", title: "Название клиента", type: "Квартиры и офисы", alt: "Квартиры и офисы"},
+{srcImg: "img/client4", title: "Длинное Название клиента", type: "Обслуживание мероприятий", alt: "Подготовка к
+мероприятию"}
+]%}
+
+{% macro imageSvg(name, class, width, height) %}
+<svg class="{{ class }}" width="{{ width }}" height="{{ height }}">
+  <use xlink:href='img/svg/sprite.svg#{{ name }}'></use>
+</svg>
+{% endmacro %}
+{% macro imageSvgColor(name, class, width, height) %}
+<svg class="{{ class }}" width="{{ width }}" height="{{ height }}">
+  <use xlink:href='img/svgcolor/sprite.svg#{{ name }}'></use>
+</svg>
+{% endmacro %}
 
 {% block content %}
 
 <header class="header">
-
   <div class="header__cover">
     <div class="header__contact h-contact">
       <ul class="h-contact__list">
+
+        {% for item in social %}
         <li class="h-contact__item">
-          <a href="#" class="h-contact__link">
+          <a href="{{ item.href }}" class="h-contact__link">
             <svg class="svg" width="32px" height="32px">
-              <use xlink:href='img/svg/sprite.svg#whatsapp'></use>
+              <use xlink:href='img/svg/sprite.svg#{{ item.svgname }}'></use>
             </svg>
           </a>
         </li>
-        <li class="h-contact__item">
-          <a href="#" class="h-contact__link">
-            <svg class="svg" width="32px" height="32px">
-              <use xlink:href='img/svg/sprite.svg#telegramm'></use>
-            </svg>
-          </a>
-        </li>
-        <li class="h-contact__item">
-          <a href="#" class="h-contact__link">
-            <svg class="svg" width="32px" height="32px">
-              <use xlink:href='img/svg/sprite.svg#instagramm'></use>
-            </svg>
-          </a>
-        </li>
+        {% endfor %}
+
         <li class="h-contact__item h-contact__item--end">
           <a href="tel:" class="h-contact__link h-contact__link--tel">
             <span class="h-contact__tel--top">+7 495</span><span class="h-contact__tel--middle">670 8900</span>
@@ -37,6 +70,7 @@
       </ul>
     </div>
     <nav class="header__nav hidden-text">
+      <h1>Сайт клининговых услуг различной сложности</h1>
       <ul>
         <li><a href="#general">Весь спектр клининговых услуг</a></li>
         <li><a href="#about">Почему выбирают нас</a></li>
@@ -45,122 +79,38 @@
       </ul>
     </nav>
     <div class="header__logo">
-      <svg class="svg" width="155px" height="133px">
-        <use xlink:href='img/svg/sprite.svg#logo'></use>
-      </svg>
+      {{ imageSvg('logo', 'svg', '155px', '133px') }}
     </div>
     <div class="header__tittle">Не откажите себе в одном из вечных удовольствий - смотреть на нашу работу</div>
     <a href="#" class="header__btn">
-      <svg class="svg" width="22px" height="25px">
-        <use xlink:href='img/svg/sprite.svg#polygon'></use>
-      </svg>
+      {{ imageSvg('polygon', 'svg', '22px', '25px') }}
       <span>Смотреть</span>
     </a>
-
   </div>
   <div class="header__backgroud">
-    <video preload="auto" loop autoplay poster="img/start-video@1x.jpg" muted class="header__video">
+    <video preload="auto" loop autoplay poster="img/start-video.jpg" muted class="header__video">
       <source src="video/video.mp4" type="video/mp4">
       <source src="video/video.ogv" type="video/ogg">
       <source src="video/video.webm" type="video/webm">
     </video>
   </div>
-
 </header>
 <main class="main">
   <section class="general-wrap" id="general">
     <div class="conteiner">
       <div class="general">
-        <h1 class="general__tittle">Весь спектр клининговых услуг</h1>
+        <h2 class="general__title">Весь спектр клининговых услуг</h2>
         <ul class="general__list">
-          <li class="general__item">
-            <a href="#" class="g-item">
-              <picture>
-                <source type="image/webp"
-                  srcset="img/type1-elit@1x.webp 1x, img/type1-elit@2x.webp 2x, img/type1-elit@3x.webp 3x">
-                <img src="img/type1-elit@1x.jpg" alt="Элитный дом" class="g-item__img"
-                  srcset="img/type1-elit@1x.webp 1x, img/type1-elit@2x.webp 2x, img/type1-elit@3x.webp 3x">
-              </picture>
-              <p class="g-item__text">Элитная недвижимость</p>
-            </a>
+          {% for item in gItem %}
+          <li class="general__item g-item">
+            <picture>
+              <source type="image/webp" srcset="{{ item.srcImg }}.webp 1x, {{ item.srcImg }}@2x.webp 2x">
+              <img src="{{ item.srcImg }}.jpg" alt="{{ item.alt }}" class="g-item__img "
+                srcset="{{ item.srcImg }}.webp 1x, {{ item.srcImg }}@2x.webp 2x">
+            </picture>
+            <h3 class="g-item__text">{{ item.text }}</h3>
           </li>
-          <li class="general__item">
-            <a href="#" class="g-item">
-              <picture>
-                <source type="image/webp"
-                  srcset="img/type2-admin@1x.webp 1x, img/type2-admin@2x.webp 2x, img/type2-admin@3x.webp 3x">
-                <img src="img/type2-admin@1x.jpg" alt="Административное здание" class="g-item__img"
-                  srcset="img/type2-admin@1x.webp 1x, img/type2-admin@2x.webp 2x, img/type2-admin@3x.webp 3x">
-              </picture>
-              <p class="g-item__text">Административные здания</p>
-            </a>
-          </li>
-          <li class="general__item">
-            <a href="#" class="g-item">
-              <picture>
-                <source type="image/webp"
-                  srcset="img/type3-home@1x.webp 1x, img/type3-home@2x.webp 2x, img/type3-home@3x.webp 3x">
-                <img src="img/type3-home@1x.jpg" alt="Квартира" class="g-item__img"
-                  srcset="img/type3-home@1x.webp 1x, img/type3-home@2x.webp 2x, img/type3-home@3x.webp 3x">
-              </picture>
-              <p class="g-item__text">Квартиры и офисы</p>
-            </a>
-          </li>
-          <li class="general__item">
-            <a href="#" class="g-item">
-              <picture>
-                <source type="image/webp"
-                  srcset="img/type4-meet@1x.webp 1x, img/type4-meet@2x.webp 2x, img/type4-meet@3x.webp 3x">
-                <img src="img/type4-meet@1x.jpg" alt="Подготовка к мероприятию" class="g-item__img"
-                  srcset="img/type4-meet@1x.webp 1x, img/type4-meet@2x.webp 2x, img/type4-meet@3x.webp 3x">
-              </picture>
-              <p class="g-item__text">Обслуживание мероприятий</p>
-            </a>
-          </li>
-          <li class="general__item">
-            <a href="#" class="g-item">
-              <picture>
-                <source type="image/webp"
-                  srcset="img/type5-outside@1x.webp 1x, img/type5-outside@2x.webp 2x, img/type5-outside@3x.webp 3x">
-                <img src="img/type5-outside@1x.jpg" alt="Мытье фасадов" class="g-item__img"
-                  srcset="img/type5-outside@1x.webp 1x, img/type5-outside@2x.webp 2x, img/type5-outside@3x.webp 3x">
-              </picture>
-              <p class="g-item__text">Мытье фасадов</p>
-            </a>
-          </li>
-          <li class="general__item">
-            <a href="#" class="g-item">
-              <picture>
-                <source type="image/webp"
-                  srcset="img/type6-window@1x.webp 1x, img/type6-window@2x.webp 2x, img/type6-window@3x.webp 3x">
-                <img src="img/type6-window@1x.jpg" alt="Окна и витражи" class="g-item__img"
-                  srcset="img/type6-window@1x.webp 1x, img/type6-window@2x.webp 2x, img/type6-window@3x.webp 3x">
-              </picture>
-              <p class="g-item__text">Окна и витражи</p>
-            </a>
-          </li>
-          <li class="general__item">
-            <a href="#" class="g-item">
-              <picture>
-                <source type="image/webp"
-                  srcset="img/type7-cover@1x.webp 1x, img/type7-cover@2x.webp 2x, img/type7-cover@3x.webp 3x">
-                <img src="img/type7-cover@1x.jpg" alt="Полы и стены" class="g-item__img"
-                  srcset="img/type7-cover@1x.webp 1x, img/type7-cover@2x.webp 2x, img/type7-cover@3x.webp 3x">
-              </picture>
-              <p class="g-item__text">Полы и стены</p>
-            </a>
-          </li>
-          <li class="general__item">
-            <a href="#" class="g-item">
-              <picture>
-                <source type="image/webp"
-                  srcset="img/type8-floor2@1x.webp 1x, img/type8-floor2@2x.webp 2x, img/type8-floor2@3x.webp 3x">
-                <img src="img/type8-floor2@1x.jpg" alt="Ковры и покрытия<" class="g-item__img"
-                  srcset="img/type8-floor2@1x.webp 1x, img/type8-floor2@2x.webp 2x, img/type8-floor2@3x.webp 3x">
-              </picture>
-              <p class="g-item__text">Ковры и покрытия</p>
-            </a>
-          </li>
+          {% endfor %}
         </ul>
         <a href="#" class="general__link">Посмотреть цены</a>
       </div>
@@ -172,70 +122,48 @@
     </svg>
     <div class="conteiner">
       <div class="about">
-        <h2 class="about__tittle">Почему выбирают нас</h2>
+        <h2 class="about__title">Почему выбирают нас</h2>
         <ul class="about__list">
           <li class="about__item a-item">
             <div class="a-item__svg">
-              <svg class="svgcolor" width="85px" height="206px">
-                <use xlink:href='img/svgcolor/sprite.svg#chouse-cln1'></use>
-              </svg>
-              <svg class="svgcolor" width="185px" height="156px">
-                <use xlink:href='img/svgcolor/sprite.svg#chouse-cln2'></use>
-              </svg>
-              <svg class="svgcolor" width="163px" height="152px">
-                <use xlink:href='img/svgcolor/sprite.svg#chouse-cln3'></use>
-              </svg>
+              {{ imageSvgColor('chouse-cln1', 'svgcolor', '85px', '206px') }}
+              {{ imageSvgColor('chouse-cln2', 'svgcolor', '185px', '156px') }}
+              {{ imageSvgColor('chouse-cln3', 'svgcolor', '163px', '152px') }}
             </div>
             <div class="a-item__description">
-              <p class="a-item__tittle">Чистота -понятие не растяжимое</p>
+              <h3 class="a-item__title">Чистота -понятие не растяжимое</h3>
               <p class="a-item__text">Чистоту наводят опытные специалисты с многолетним стажем и опытом</p>
             </div>
           </li>
           <li class="about__item a-item a-item--return">
             <div class="a-item__svg">
-              <svg class="svgcolor" width="165px" height="173px">
-                <use xlink:href='img/svgcolor/sprite.svg#chouse-per1'></use>
-              </svg>
-              <svg class="svgcolor" width="117px" height="143px">
-                <use xlink:href='img/svgcolor/sprite.svg#chouse-per2'></use>
-              </svg>
-              <svg class="svgcolor" width="167px" height="181px">
-                <use xlink:href='img/svgcolor/sprite.svg#chouse-per3'></use>
-              </svg>
+              {{ imageSvgColor('chouse-per1', 'svgcolor', '165px', '173px') }}
+              {{ imageSvgColor('chouse-per2', 'svgcolor', '117px', '143px') }}
+              {{ imageSvgColor('chouse-per3', 'svgcolor', '167px', '181px') }}
             </div>
             <div class="a-item__description">
-              <p class="a-item__tittle">Персонал</p>
+              <h3 class="a-item__title">Персонал</h3>
               <p class="a-item__text">Обоятельные и харизматичные сотрудники имеющие опыт общения с VIP-клиентом</p>
             </div>
           </li>
           <li class="about__item a-item">
             <div class="a-item__svg">
-              <svg class="svgcolor" width="202px" height="201px">
-                <use xlink:href='img/svgcolor/sprite.svg#chouse-prs1'></use>
-              </svg>
-              <svg class="svgcolor" width="204px" height="163px">
-                <use xlink:href='img/svgcolor/sprite.svg#chouse-prs2'></use>
-              </svg>
+              {{ imageSvgColor('chouse-prs1', 'svgcolor', '202px', '201px') }}
+              {{ imageSvgColor('chouse-prs2', 'svgcolor', '204px', '163px') }}
             </div>
             <div class="a-item__description">
-              <p class="a-item__tittle">Цены</p>
+              <h3 class="a-item__title">Цены</h3>
               <p class="a-item__text">Расчитываем реальную стоимость работ<br>Никаких скрытых доплат</p>
             </div>
           </li>
           <li class="about__item a-item a-item--return">
             <div class="a-item__svg">
-              <svg class="svgcolor" width="157px" height="126px">
-                <use xlink:href='img/svgcolor/sprite.svg#chouse-ind1'></use>
-              </svg>
-              <svg class="svgcolor" width="108px" height="173px">
-                <use xlink:href='img/svgcolor/sprite.svg#chouse-ind2'></use>
-              </svg>
-              <svg class="svgcolor" width="119px" height="190px">
-                <use xlink:href='img/svgcolor/sprite.svg#chouse-ind3'></use>
-              </svg>
+              {{ imageSvgColor('chouse-ind1', 'svgcolor', '157px', '126px') }}
+              {{ imageSvgColor('chouse-ind2', 'svgcolor', '108px', '173px') }}
+              {{ imageSvgColor('chouse-ind3', 'svgcolor', '119px', '190px') }}
             </div>
             <div class="a-item__description">
-              <p class="a-item__tittle">Индивидуальный подход</p>
+              <h3 class="a-item__title">Индивидуальный подход</h3>
               <p class="a-item__text">Особенно важен в обслуживании мероприятий <br>Делаем в удобное для вас время</p>
             </div>
           </li>
@@ -248,111 +176,26 @@
   </section>
   <section class="clients-wrap" id="clients">
     <div class="clients">
-      <h2 class="clients__tittle">Наши довольные клиенты</h2>
-      <div class="glide clients__slider">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides clients__list c-list">
-            <li class="c-list__item">
-              <picture>
-                <source type="image/webp"
-                  srcset="img/client1@1x.webp 1x, img/client1@2x.webp 2x, img/client1@3x.webp 3x">
-                <img src="img/client1@1x.jpg" alt="Элитная недвижимость" class="c-list__img"
-                  srcset="img/client1@1x.webp 1x, img/client1@2x.webp 2x, img/client1@3x.webp 3x">
-              </picture>
-              <p class="c-list__tittle">Название клиента</p>
-              <p class="c-list__type">Элитная недвижимость</p>
-            </li>
-            <li class="c-list__item">
-              <picture>
-                <source type="image/webp"
-                  srcset="img/client2@1x.webp 1x, img/client2@2x.webp 2x, img/client2@3x.webp 3x">
-                <img src="img/client2@1x.jpg" alt="Обслуживание мероприятий" class="c-list__img"
-                  srcset="img/client2@1x.webp 1x, img/client2@2x.webp 2x, img/client2@3x.webp 3x">
-              </picture>
-              <p class="c-list__tittle">Длинное Название клиента</p>
-              <p class="c-list__type">Обслуживание мероприятий</p>
-            </li>
-            <li class="c-list__item">
-              <picture>
-                <source type="image/webp"
-                  srcset="img/client3@1x.webp 1x, img/client3@2x.webp 2x, img/client3@3x.webp 3x">
-                <img src="img/client3@1x.jpg" alt="Административные здания" class="c-list__img"
-                  srcset="img/client3@1x.webp 1x, img/client3@2x.webp 2x, img/client3@3x.webp 3x">
-              </picture>
-              <p class="c-list__tittle">Название клиента</p>
-              <p class="c-list__type">Административные здания</p>
-            </li>
-            <li class="c-list__item">
-              <picture>
-                <source type="image/webp"
-                  srcset="img/client4@1x.webp 1x, img/client4@2x.webp 2x, img/client4@3x.webp 3x">
-                <img src="img/client4@1x.jpg" alt="Окна и витражи" class="c-list__img"
-                  srcset="img/client4@1x.webp 1x, img/client4@2x.webp 2x, img/client4@3x.webp 3x">
-              </picture>
-              <p class="c-list__tittle">Название клиента</p>
-              <p class="c-list__type">Окна и витражи</p>
-            </li>
-            <li class="c-list__item">
-              <picture>
-                <source type="image/webp"
-                  srcset="img/client1@1x.webp 1x, img/client1@2x.webp 2x, img/client1@3x.webp 3x">
-                <img src="img/client1@1x.jpg" alt="Элитная недвижимость" class="c-list__img"
-                  srcset="img/client1@1x.webp 1x, img/client1@2x.webp 2x, img/client1@3x.webp 3x">
-              </picture>
-              <p class="c-list__tittle">Название клиента</p>
-              <p class="c-list__type">Элитная недвижимость</p>
-            </li>
-            <li class="c-list__item">
-              <picture>
-                <source type="image/webp"
-                  srcset="img/client2@1x.webp 1x, img/client2@2x.webp 2x, img/client2@3x.webp 3x">
-                <img src="img/client2@1x.jpg" alt="Обслуживание мероприятий" class="c-list__img"
-                  srcset="img/client2@1x.webp 1x, img/client2@2x.webp 2x, img/client2@3x.webp 3x">
-              </picture>
-              <p class="c-list__tittle">Длинное Название клиента</p>
-              <p class="c-list__type">Обслуживание мероприятий</p>
-            </li>
-            <li class="c-list__item">
-              <picture>
-                <source type="image/webp"
-                  srcset="img/client3@1x.webp 1x, img/client3@2x.webp 2x, img/client3@3x.webp 3x">
-                <img src="img/client3@1x.jpg" alt="Административные здания" class="c-list__img"
-                  srcset="img/client3@1x.webp 1x, img/client3@2x.webp 2x, img/client3@3x.webp 3x">
-              </picture>
-              <p class="c-list__tittle">Название клиента</p>
-              <p class="c-list__type">Административные здания</p>
-            </li>
-            <li class="c-list__item">
-              <picture>
-                <source type="image/webp"
-                  srcset="img/client4@1x.webp 1x, img/client4@2x.webp 2x, img/client4@3x.webp 3x">
-                <img src="img/client4@1x.jpg" alt="Окна и витражи" class="c-list__img"
-                  srcset="img/client4@1x.webp 1x, img/client4@2x.webp 2x, img/client4@3x.webp 3x">
-              </picture>
-              <p class="c-list__tittle">Название клиента</p>
-              <p class="c-list__type">Окна и витражи</p>
-            </li>
-          </ul>
-          <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<" aria-label="Предидущий слайд">
-            </button>
-            <button class="glide__arrow glide__arrow--right" data-glide-dir=">" aria-label="Следующий слайд">
-            </button>
-          </div>
-          <div class="glide__bullets" data-glide-el="controls[nav]">
-            <button class="glide__bullet" data-glide-dir="=0" aria-label="Первый слайд"></button>
-            <button class="glide__bullet" data-glide-dir="=1" aria-label="Второй слайд"></button>
-            <button class="glide__bullet" data-glide-dir="=2" aria-label="Третьий слайд"></button>
-            <button class="glide__bullet" data-glide-dir="=3" aria-label="Четвёртый слайд"></button>
-          </div>
-        </div>
-      </div>
+      <h2 class="clients__title">Наши довольные клиенты</h2>
+      <ul class="clients__list c-list">
+        {% for item in clients %}
+        <li class="c-list__item">
+          <picture>
+            <source type="image/webp" srcset="{{ item.srcImg }}.webp 1x, {{ item.srcImg }}@2x.webp 2x">
+            <img src="{{ item.srcImg }}.jpg" alt="{{ item.alt }}" class="c-list__img"
+              srcset="{{ item.srcImg }}.webp 1x, {{ item.srcImg }}@2x.webp 2x">
+          </picture>
+          <h3 class="c-list__title">{{ item.title }}</h3>
+          <p class="c-list__type">{{ item.type }}</p>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
   </section>
   <section class="feedback-wrap" id="feedback">
     <div class="conteiner">
       <div class="feedback">
-        <h2 class="feedback__tittle">Напишите нам</h2>
+        <h2 class="feedback__title">Напишите нам</h2>
         <p class="feedback__description">
           Хотите сделать заказ, у вас возникли вопросы или предложения?<br>Напишите свои данные и мы вам перезвоним
         </p>
@@ -376,9 +219,7 @@
   <div class="conteiner">
     <div class="footer">
       <div class="footer__logo">
-        <svg class="svg" width="155px" height="133px">
-          <use xlink:href='img/svg/sprite.svg#logo'></use>
-        </svg>
+        {{ imageSvg('logo', 'svg', '155px', '133px') }}
       </div>
       <div class="footer__info">
         <p class="footer__text--upper">luxembrace.com</p>
