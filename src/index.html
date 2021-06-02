@@ -177,20 +177,35 @@
   <section class="clients-wrap" id="clients">
     <div class="clients">
       <h2 class="clients__title">Наши довольные клиенты</h2>
-      <ul class="clients__list c-list">
-        {% for item in clients %}
-        <li class="c-list__item">
-          <picture>
-            <source type="image/webp" srcset="{{ item.srcImg }}.webp 1x, {{ item.srcImg }}@2x.webp 2x">
-            <img src="{{ item.srcImg }}.jpg" alt="{{ item.alt }}" class="c-list__img"
-              srcset="{{ item.srcImg }}.webp 1x, {{ item.srcImg }}@2x.webp 2x">
-          </picture>
-          <h3 class="c-list__title">{{ item.title }}</h3>
-          <p class="c-list__type">{{ item.type }}</p>
-        </li>
-        {% endfor %}
-      </ul>
+      <div class="clients__slider">
+        <button class="prevButton"></button>
+        <button class="nextButton"></button>
+        <ul class="clients__list c-list">
+          {% for item in clients %}
+          <li class="c-list__item">
+            <picture>
+              <source type="image/webp" srcset="{{ item.srcImg }}.webp 1x, {{ item.srcImg }}@2x.webp 2x">
+              <img src="{{ item.srcImg }}.jpg" alt="{{ item.alt }}" class="c-list__img"
+                srcset="{{ item.srcImg }}.webp 1x, {{ item.srcImg }}@2x.webp 2x">
+            </picture>
+            <h3 class="c-list__title">{{ item.title }}</h3>
+            <p class="c-list__type">{{ item.type }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="navContainer">
+          <button class="navButton navButton--1"></button>
+          <button class="navButton navButton--2"></button>
+          <button class="navButton navButton--3"></button>
+          <button class="navButton navButton--4"></button>
+          <button class="navButton navButton--5"></button>
+          <button class="navButton navButton--6"></button>
+          <button class="navButton navButton--7"></button>
+          <button class="navButton navButton--8"></button>
+        </div>
+      </div>
     </div>
+
   </section>
   <section class="feedback-wrap" id="feedback">
     <div class="conteiner">

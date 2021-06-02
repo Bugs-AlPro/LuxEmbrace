@@ -8,7 +8,6 @@
   <meta name="description" content="Весь спектр клининговых услуг">
   <title>{{ tittle }}</title>
   <link rel="stylesheet" href="css/main.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 </head>
 
 <body class="body">
@@ -17,32 +16,7 @@
   {% endblock %}
 
 </body>
-
-<script>
-  var slider = tns({
-    container: '.c-list',
-    items: 1,
-    loop: false,
-    mouseDrag: true,
-    controls: true,
-    controlsText: '  ',
-    navPosition: 'botoom',
-    responsive: {
-      200: {
-        items: 1
-      },
-      577: {
-        items: 2
-      },
-      768: {
-        items: 3
-      },
-      992: {
-        items: 4
-      }
-    }
-  });
-
-</script>
+<script src="js/tiny.js"></script>
+<script src="js/slider.js"></script>
 
 </html>

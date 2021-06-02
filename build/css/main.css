@@ -7,10 +7,10 @@
 .tns-controls {
   position: relative; }
 
-.tns-controls button {
+.prevButton,
+.nextButton {
   position: absolute;
   border: none;
-  top: 100px;
   width: 47px;
   height: 47px;
   border-radius: 50%;
@@ -20,25 +20,37 @@
   display: inline-block;
   color: #15ABEB; }
 
+.prevButton {
+  left: -50px; }
+
+.nextButton {
+  right: -50px; }
+
+@media (min-width: 1200px) {
+  .prevButton,
+  .nextButton {
+    top: 100px; } }
+
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  .tns-controls button {
+  .prevButton,
+  .nextButton {
     top: 70px; } }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .tns-controls button {
-    top: 70px; } }
+  .prevButton,
+  .nextButton {
+    top: 60px; } }
 
 @media (max-width: 767.98px) {
-  .tns-controls button {
-    top: 50px; } }
+  .prevButton,
+  .nextButton {
+    top: 60px; }
+  .prevButton {
+    left: -60px; }
+  .nextButton {
+    right: -60px; } }
 
-.tns-controls button:nth-child(1) {
-  left: -60px; }
-
-.tns-controls button:nth-child(2) {
-  right: -60px; }
-
-.tns-controls button:nth-child(2)::before {
+.nextButton::before {
   content: "";
   top: 30%;
   left: 30%;
@@ -49,7 +61,7 @@
   width: 15px;
   height: 15px; }
 
-.tns-controls button:nth-child(1)::before {
+.prevButton::before {
   content: "";
   top: 30%;
   left: 40%;
@@ -60,21 +72,22 @@
   width: 15px;
   height: 15px; }
 
-.tns-controls button:hover,
-.tns-controls button:focus {
+.prevButton:hover,
+.nextButton:focus {
   box-shadow: 0 0 1px 1px #15ABEB;
   outline: none; }
 
-.tns-controls button:disabled {
+.prevButton:disabled,
+.nextButton:disabled {
   color: #EDEDED;
   box-shadow: 0 0 1px 1px #EDEDED; }
 
-.tns-nav {
+.navContainer {
   margin-top: 30px;
   display: flex;
   justify-content: center; }
 
-.tns-nav button {
+.navButton {
   cursor: pointer;
   width: 15px;
   height: 15px;
@@ -85,18 +98,18 @@
   background-color: #AAB7BC; }
 
 @media (max-width: 767.98px) {
-  .tns-nav button {
+  .navButton {
     margin: 10px 4px 15px 4px;
     padding: 0px;
     width: 10px;
     height: 10px; } }
 
-.tns-nav button:hover,
-.tns-nav button:focus {
+.navButton:hover,
+.navButton:focus {
   background-color: #15ABEB;
   transform: scale(1.1); }
 
-div .tns-nav-active {
+.tns-nav-active {
   background-color: #15ABEB; }
 
 @font-face {
@@ -305,12 +318,15 @@ div .tns-nav-active {
       font-weight: 400;
       margin-top: 15px; }
   .clients {
+    position: relative;
     margin: 0 80px; }
     .clients__title {
       font-size: 26px;
       font-weight: 600;
       text-align: center;
       margin: 40px 0; }
+    .clients__slider {
+      position: relative; }
   .c-list {
     position: relative;
     display: flex; }
@@ -318,22 +334,24 @@ div .tns-nav-active {
       text-align: center;
       display: flex;
       flex-direction: column;
-      align-items: center; }
+      align-items: center;
+      overflow: hidden; }
     .c-list__img {
       border-radius: 20px;
-      width: 160px; }
+      width: 145px; }
     .c-list__title {
       margin: 15px 0 0 0;
       white-space: normal;
       font-size: 18px;
       font-weight: 600;
-      width: 160px;
+      width: 145px;
       display: inline-block;
       text-align: center; }
     .c-list__type {
       margin-top: 10px;
-      font-size: 16px;
-      font-weight: 400; }
+      font-size: 14px;
+      font-weight: 400;
+      width: 145px; }
   .feedback {
     text-align: center; }
     .feedback__title {
@@ -599,12 +617,15 @@ div .tns-nav-active {
       font-weight: 400;
       margin-top: 15px; }
   .clients {
+    position: relative;
     margin: 0 90px; }
     .clients__title {
       font-size: 38px;
       font-weight: 600;
       text-align: center;
       margin: 70px 0; }
+    .clients__slider {
+      position: relative; }
   .c-list {
     position: relative;
     display: flex; }
@@ -900,12 +921,15 @@ div .tns-nav-active {
       font-weight: 400;
       margin-top: 15px; }
   .clients {
+    position: relative;
     margin: 0 100px; }
     .clients__title {
       font-size: 50px;
       font-weight: 400;
       text-align: center;
       margin: 100px 0; }
+    .clients__slider {
+      position: relative; }
   .c-list {
     position: relative;
     display: flex; }
@@ -1200,6 +1224,8 @@ div .tns-nav-active {
       font-weight: 400;
       text-align: center;
       margin: 100px 0; }
+    .clients__slider {
+      position: relative; }
   .c-list {
     position: relative;
     display: flex; }

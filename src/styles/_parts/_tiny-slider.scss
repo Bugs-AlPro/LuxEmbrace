@@ -7,11 +7,10 @@
 .tns-controls {
   position: relative;
 }
-
-.tns-controls button {
+.prevButton,
+.nextButton {
   position: absolute;
   border: none;
-  top: 100px;
   width: 47px;
   height: 47px;
   border-radius: 50%;
@@ -21,28 +20,43 @@
   display: inline-block;
   color: $glide;
 }
+.prevButton {
+  left: -50px;
+}
+.nextButton {
+  right: -50px;
+}
+@include media-up(xl) {
+  .prevButton,
+  .nextButton {
+    top: 100px;
+  }
+}
 @include media-only(lg) {
-  .tns-controls button {
+  .prevButton,
+  .nextButton {
     top: 70px;
   }
 }
 @include media-only(md) {
-  .tns-controls button {
-    top: 70px;
+  .prevButton,
+  .nextButton {
+    top: 60px;
   }
 }
 @include media-down(md) {
-  .tns-controls button {
-    top: 50px;
+  .prevButton,
+  .nextButton {
+    top: 60px;
+  }
+  .prevButton {
+    left: -60px;
+  }
+  .nextButton {
+    right: -60px;
   }
 }
-.tns-controls button:nth-child(1) {
-  left: -60px;
-}
-.tns-controls button:nth-child(2) {
-  right: -60px;
-}
-.tns-controls button:nth-child(2)::before {
+.nextButton::before {
   content: "";
   top: 30%;
   left: 30%;
@@ -53,7 +67,7 @@
   width: 15px;
   height: 15px;
 }
-.tns-controls button:nth-child(1)::before {
+.prevButton::before {
   content: "";
   top: 30%;
   left: 40%;
@@ -64,21 +78,22 @@
   width: 15px;
   height: 15px;
 }
-.tns-controls button:hover,
-.tns-controls button:focus {
+.prevButton:hover,
+.nextButton:focus {
   box-shadow: 0 0 1px 1px $glide;
   outline: none;
 }
-.tns-controls button:disabled {
+.prevButton:disabled,
+.nextButton:disabled {
   color: #EDEDED;
   box-shadow: 0 0 1px 1px #EDEDED;
 }
-.tns-nav {
+.navContainer {
   margin-top: 30px;
   display: flex;
   justify-content: center;
 }
-.tns-nav button {
+.navButton {
   cursor: pointer;
   width: 15px;
   height: 15px;
@@ -89,18 +104,18 @@
   background-color: $color-input;
 }
 @include media-down(md) {
-  .tns-nav button {
+  .navButton {
     margin: 10px 4px 15px 4px;
     padding: 0px;
     width: 10px;
     height: 10px;
   }
 }
-.tns-nav button:hover,
-.tns-nav button:focus {
+.navButton:hover,
+.navButton:focus {
   background-color: $glide;
   transform: scale(1.1);
 }
-div .tns-nav-active {
+.tns-nav-active {
   background-color: $glide;
 }  

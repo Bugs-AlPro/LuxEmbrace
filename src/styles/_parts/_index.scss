@@ -260,12 +260,16 @@
     }
   }
   .clients {
+    position: relative;
     margin: 0 80px;
     &__title {
       font-size: 26px;
       font-weight: 600;
       text-align: center;
       margin: 40px 0;
+    }
+    &__slider {
+      position: relative;
     }
   }
   .c-list {
@@ -276,24 +280,26 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      overflow: hidden;
     }
     &__img {
       border-radius: 20px;
-      width: 160px;
+      width: 145px;
     }
     &__title {
       margin: 15px 0 0 0;
       white-space: normal;
       font-size: 18px;
       font-weight: 600; 
-      width: 160px;
+      width: 145px;
       display: inline-block;
       text-align: center;
     }
     &__type {
       margin-top: 10px;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 400;
+      width: 145px;
     }
   }
   .feedback {
@@ -643,12 +649,16 @@
     }
   }
   .clients {
+    position: relative;
     margin: 0 90px;
     &__title {
       font-size: 38px;
       font-weight: 600;
       text-align: center;
       margin: 70px 0;
+    }
+    &__slider {
+      position: relative;
     }
   }
   .c-list {
@@ -1025,12 +1035,16 @@
     }
   }
   .clients {
+    position: relative;
     margin: 0 100px;
     &__title {
       font-size: 50px;
       font-weight: 400;
       text-align: center;
       margin: 100px 0;
+    }
+    &__slider {
+      position: relative;
     }
   }
   .c-list {
@@ -1416,6 +1430,9 @@
       font-weight: 400;
       text-align: center;
       margin: 100px 0;
+    }
+    &__slider {
+      position: relative;
     }
   }
   .c-list {
