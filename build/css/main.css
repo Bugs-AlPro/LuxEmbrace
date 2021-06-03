@@ -29,19 +29,51 @@
 @media (min-width: 1200px) {
   .prevButton,
   .nextButton {
-    top: 100px; } }
+    top: 100px; }
+  .navButton--3,
+  .navButton--4,
+  .navButton--5,
+  .navButton--6,
+  .navButton--7,
+  .navButton--8 {
+    display: none; } }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .prevButton,
   .nextButton {
-    top: 70px; } }
+    top: 70px; }
+  .navButton--3,
+  .navButton--4,
+  .navButton--5,
+  .navButton--6,
+  .navButton--7,
+  .navButton--8 {
+    display: none; } }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .prevButton,
   .nextButton {
-    top: 60px; } }
+    top: 60px; }
+  .navButton--4,
+  .navButton--5,
+  .navButton--6,
+  .navButton--7,
+  .navButton--8 {
+    display: none; } }
 
-@media (max-width: 767.98px) {
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .prevButton,
+  .nextButton {
+    top: 60px; }
+  .prevButton {
+    left: -60px; }
+  .nextButton {
+    right: -60px; }
+  .navButton--7,
+  .navButton--8 {
+    display: none; } }
+
+@media (max-width: 575.98px) {
   .prevButton,
   .nextButton {
     top: 60px; }

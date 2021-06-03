@@ -31,11 +31,27 @@
   .nextButton {
     top: 100px;
   }
+  .navButton--3,
+  .navButton--4,
+  .navButton--5,
+  .navButton--6,
+  .navButton--7,
+  .navButton--8 {
+    display: none;
+  }
 }
 @include media-only(lg) {
   .prevButton,
   .nextButton {
     top: 70px;
+  }
+  .navButton--3,
+  .navButton--4,
+  .navButton--5,
+  .navButton--6,
+  .navButton--7,
+  .navButton--8 {
+    display: none;
   }
 }
 @include media-only(md) {
@@ -43,8 +59,31 @@
   .nextButton {
     top: 60px;
   }
+  .navButton--4,
+  .navButton--5,
+  .navButton--6,
+  .navButton--7,
+  .navButton--8 {
+    display: none;
+  }
 }
-@include media-down(md) {
+@include media-only(sm) {
+  .prevButton,
+  .nextButton {
+    top: 60px;
+  }
+  .prevButton {
+    left: -60px;
+  }
+  .nextButton {
+    right: -60px;
+  }
+  .navButton--7,
+  .navButton--8 {
+    display: none;
+  }
+}
+@include media-down(sm) {
   .prevButton,
   .nextButton {
     top: 60px;
