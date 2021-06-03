@@ -2,15 +2,14 @@
   font-family: "Nunito";
   font-style: normal;
   font-weight: 400;
-  src: local("Rubik"),
+  src: local("Nunito"),
        url("../fonts/Nunitoregular.woff2") format("woff2"),
        url("../fonts/Nunitoregular.woff") format("woff");
 }
 @font-face {
   font-family: "Nunito";
-  font-style: bold;
   font-weight: 600;
-  src: local("Rubik"),
+  src: local("Nunito"),
        url("../fonts/Nunitosemibold.woff2") format("woff2"),
        url("../fonts/Nunitosemibold.woff") format("woff");
 }
@@ -1214,7 +1213,7 @@
     }
   .conteiner {
     margin: 0 auto;
-    padding: 0 70px;
+    padding: 0 50px;
     max-width: 1400px;
   }
   .header {
@@ -1230,13 +1229,13 @@
       justify-content: space-between;
       background-color: hsla(183, 100%, 7%, 0.6);
       align-items: center;    
-      padding-bottom: 100px;
+      padding-bottom: 288px;
     }
     &__cover::after {
       content: "";
       position: absolute;
       width: 100%;
-      height: 100px;
+      height: 171px;
       bottom: -1px;
       left: 0;
       background-size: cover;
@@ -1246,25 +1245,29 @@
     &__backgroud {
       width: 100%;
       position: absolute;
-      top: -50px;
+      top: 0;
       left: 0;
     }
     &__video {
-      width: 100%;
+      height: 100%;
     }
     
     &__tittle {
       font-size: 48px;
-      margin: 30px 10%;
+      font-weight: 400;
+      margin: 116px 10% 42px 10%;
       text-align: center;
+      max-width: 1200px;
     }
     &__btn {
       background-color: $glide;
-      padding: 20px 50px;
+      padding: 20px 50px 20px 53px;
       border-radius: 32px;
       display: flex;
       gap: 15px;
       color: white;
+      text-transform: uppercase;
+      font-size: 18px;
     }
     // &__svg {
     //   display: block;
@@ -1295,13 +1298,17 @@
     }
     &__link--tel {
       display: inline-flex;
+      align-items: flex-start;
     }
     &__tel--top {
       font-size: 24px;
       font-weight: 700;
+      margin-top: 0;
     }
     &__tel--middle {
+      margin-top: 0;
       font-size: 36px;
+      line-height: 40px;
       font-weight: 400;
       margin-left: 10px;
     }
@@ -1328,12 +1335,11 @@
       border-radius: 12px;
       padding: 15px 65px;
       display: inline-block;
-      margin-bottom: 100px;
+      margin: 106px 0 90px 0;
     }
   }
   .g-item {
     display: block;
-    margin-bottom: 60px;
     width: 240px;
     &__img {
       border-radius: 24px;
@@ -1342,7 +1348,7 @@
       margin-top: 23px;
       font-size: 24px;
       font-weight: 600;
-      width: 100%;
+      width: 230px;
       color: $color;
       text-align: center;
       padding-bottom: 10px;
@@ -1368,6 +1374,7 @@
     &__svg-start {
       display: block;
       width: 100%;
+      height: 170px;
       background-color: transparent;
       fill: white;
       transform: rotate(180deg);
@@ -1375,6 +1382,7 @@
     &__svg-end {
       display: block;
       width: 100%;
+      height: 170px;
       background-color: transparent;
       fill: white;
     }
@@ -1388,12 +1396,13 @@
     }
   }
   .a-item {
+    margin-bottom: 40px;
     display: flex;
     gap: 40px;
     justify-content: space-between;
     &__svg {
       display: flex;
-      gap: 20px;
+      gap: 15px;
       justify-content: space-between;
       align-items: center;
       flex-basis: 50%;
@@ -1408,6 +1417,7 @@
     &__title {
       font-size: 36px;
       font-weight: 600;
+      margin-bottom: 10px;
     }
     &__text {
       font-size: 18px;
@@ -1429,7 +1439,7 @@
       font-size: 64px;
       font-weight: 400;
       text-align: center;
-      margin: 100px 0;
+      margin: 100px 0 60px 0;
     }
     &__slider {
       position: relative;
