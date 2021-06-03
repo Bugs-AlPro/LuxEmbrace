@@ -1244,12 +1244,15 @@
     }
     &__backgroud {
       width: 100%;
+      height: 100%;
       position: absolute;
       top: 0;
       left: 0;
+      display: grid;
     }
     &__video {
-      height: 100%;
+      width: 130%;
+      // height: 100%;
     }
     
     &__tittle {
