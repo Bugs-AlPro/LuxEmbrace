@@ -70,13 +70,13 @@
 @include media-only(sm) {
   .prevButton,
   .nextButton {
-    top: 60px;
+    top: 50px;
   }
   .prevButton {
-    left: -60px;
+    left: -50px;
   }
   .nextButton {
-    right: -60px;
+    right: -50px;
   }
   .navButton--7,
   .navButton--8 {
@@ -86,7 +86,7 @@
 @include media-down(sm) {
   .prevButton,
   .nextButton {
-    top: 60px;
+    top: 50px;
   }
   .prevButton {
     left: -60px;
