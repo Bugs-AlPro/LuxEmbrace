@@ -97,7 +97,7 @@
 </header>
 <main class="main">
   <section class="general-wrap" id="general">
-    <div class="conteiner">
+    <div class="container">
       <div class="general">
         <h2 class="general__title">Весь спектр клининговых услуг</h2>
         <ul class="general__list">
@@ -120,7 +120,7 @@
     <svg class="about-wrap__svg-start">
       <use xlink:href='img/svg/sprite.svg#transition1'></use>
     </svg>
-    <div class="conteiner">
+    <div class="container">
       <div class="about">
         <h2 class="about__title">Почему выбирают нас</h2>
         <ul class="about__list">
@@ -178,8 +178,8 @@
     <div class="clients">
       <h2 class="clients__title">Наши довольные клиенты</h2>
       <div class="clients__slider">
-        <button class="prevButton"></button>
-        <button class="nextButton"></button>
+        <button class="prevButton" aria-label="Предидущий слайд"></button>
+        <button class="nextButton" aria-label="Следующий слайд"></button>
         <ul class="clients__list c-list">
           {% for item in clients %}
           <li class="c-list__item">
@@ -194,21 +194,21 @@
           {% endfor %}
         </ul>
         <div class="navContainer">
-          <button class="navButton navButton--1"></button>
-          <button class="navButton navButton--2"></button>
-          <button class="navButton navButton--3"></button>
-          <button class="navButton navButton--4"></button>
-          <button class="navButton navButton--5"></button>
-          <button class="navButton navButton--6"></button>
-          <button class="navButton navButton--7"></button>
-          <button class="navButton navButton--8"></button>
+          <button class="navButton navButton--1" aria-label="Первый слайд"></button>
+          <button class="navButton navButton--2" aria-label="Второй слайд"></button>
+          <button class="navButton navButton--3" aria-label="Третий слайд"></button>
+          <button class="navButton navButton--4" aria-label="Четвёртый слайд"></button>
+          <button class="navButton navButton--5" aria-label="Пятый слайд"></button>
+          <button class="navButton navButton--6" aria-label="Шестой слайд"></button>
+          <button class="navButton navButton--7" aria-label="Седьмой слайд"></button>
+          <button class="navButton navButton--8" aria-label="Восьмой слайд"></button>
         </div>
       </div>
     </div>
 
   </section>
   <section class="feedback-wrap" id="feedback">
-    <div class="conteiner">
+    <div class="container">
       <div class="feedback">
         <h2 class="feedback__title">Напишите нам</h2>
         <p class="feedback__description">
@@ -224,14 +224,14 @@
           <input type="checkbox" id="agree" class="hidden-text f-form__checkbox" name="personal-date" required>
           <span class="f-form__check"></span>
         </label>
-        <button type="submit" class="f-form__btn">Перезвоните мне</button>
+        <button type="submit" class="f-form__btn" aria-label="Отправить форму">Перезвоните мне</button>
         <span class="f-form__text">Заявка отправлена. Спасибо за обращение! Мы перезвоним вам в течении 5-10 мин.</span>
       </form>
     </div>
   </section>
 </main>
 <footer class="footer-wrap">
-  <div class="conteiner">
+  <div class="container">
     <div class="footer">
       <div class="footer__logo">
         {{ imageSvg('logo', 'svg', '155px', '133px') }}

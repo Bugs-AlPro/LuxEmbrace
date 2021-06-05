@@ -146,19 +146,19 @@
 
 @font-face {
   font-family: 'Nunito';
-  src: local("Nunito Regular"), local("Nunito-Regular"), url("Nunitoregular.woff2") format("woff2"), url("Nunitoregular.woff") format("woff");
+  src: local("Nunito Regular"), local("Nunito-Regular"), url("../fonts/Nunitoregular.woff2") format("woff2"), url("../fonts/Nunitoregular.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: 'Nunito';
-  src: local("Nunito Bold"), local("Nunito-Bold"), url("Nunitobold.woff2") format("woff2"), url("Nunitobold.woff") format("woff");
+  src: local("Nunito Bold"), local("Nunito-Bold"), url("../fonts/Nunitobold.woff2") format("woff2"), url("../fonts/Nunitobold.woff") format("woff");
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'Nunito';
-  src: local("Nunito SemiBold"), local("Nunito-SemiBold"), url("Nunitosemibold.woff2") format("woff2"), url("Nunitosemibold.woff") format("woff");
+  src: local("Nunito SemiBold"), local("Nunito-SemiBold"), url("../fonts/Nunitosemibold.woff2") format("woff2"), url("../fonts/Nunitosemibold.woff") format("woff");
   font-weight: 600;
   font-style: normal; }
 
@@ -208,7 +208,7 @@
     list-style: none;
     padding: 0;
     margin: 0; }
-  .conteiner {
+  .container {
     margin: 0 auto;
     padding: 0 20px; }
   .header {
@@ -327,8 +327,8 @@
   .about-wrap {
     position: relative;
     background-color: #EDFAFF;
-    background-image: linear-gradient(33.5deg, transparent 35px, #D3F3FF 35px, #D3F3FF 37px, transparent 37px, transparent 118px, #D3F3FF 118px, #D3F3FF 120px, transparent 120px), linear-gradient(146.5deg, transparent 35px, #D3F3FF 35px, #D3F3FF 37px, transparent 37px, transparent 118px, #D3F3FF 118px, #D3F3FF 120px, transparent 120px);
-    background-size: 150px 100px; }
+    background-image: linear-gradient(29.6deg, transparent 41.5px, #D3F3FF 41.5px, #D3F3FF 43.5px, transparent 43.5px, transparent 126px, #D3F3FF 126px, #D3F3FF 128px, transparent 128px), linear-gradient(150.5deg, transparent 41.5px, #D3F3FF 41.5px, #D3F3FF 43.5px, transparent 43.5px, transparent 126px, #D3F3FF 126px, #D3F3FF 128px, transparent 128px);
+    background-size: 171px 97px; }
     .about-wrap__svg-start {
       position: absolute;
       left: 0;
@@ -535,7 +535,7 @@
     list-style: none;
     padding: 0;
     margin: 0; }
-  .conteiner {
+  .container {
     margin: auto;
     padding: 0 70px; }
   .header {
@@ -613,6 +613,7 @@
       align-items: flex-start; }
     .h-contact__tel--top {
       font-size: 20px;
+      line-height: 26px;
       font-weight: 700; }
     .h-contact__tel--middle {
       font-size: 30px;
@@ -656,8 +657,8 @@
   .about-wrap {
     position: relative;
     background-color: #EDFAFF;
-    background-image: linear-gradient(33.5deg, transparent 35px, #D3F3FF 35px, #D3F3FF 37px, transparent 37px, transparent 118px, #D3F3FF 118px, #D3F3FF 120px, transparent 120px), linear-gradient(146.5deg, transparent 35px, #D3F3FF 35px, #D3F3FF 37px, transparent 37px, transparent 118px, #D3F3FF 118px, #D3F3FF 120px, transparent 120px);
-    background-size: 150px 100px; }
+    background-image: linear-gradient(29.6deg, transparent 41.5px, #D3F3FF 41.5px, #D3F3FF 43.5px, transparent 43.5px, transparent 126px, #D3F3FF 126px, #D3F3FF 128px, transparent 128px), linear-gradient(150.5deg, transparent 41.5px, #D3F3FF 41.5px, #D3F3FF 43.5px, transparent 43.5px, transparent 126px, #D3F3FF 126px, #D3F3FF 128px, transparent 128px);
+    background-size: 171px 97px; }
     .about-wrap__svg-start {
       position: absolute;
       left: 0;
@@ -860,7 +861,7 @@
     list-style: none;
     padding: 0;
     margin: 0; }
-  .conteiner {
+  .container {
     margin: 0 auto;
     padding: 0 70px; }
   .header {
@@ -936,6 +937,7 @@
       align-items: flex-start; }
     .h-contact__tel--top {
       font-size: 20px;
+      line-height: 26px;
       font-weight: 700; }
     .h-contact__tel--middle {
       font-size: 30px;
@@ -980,8 +982,8 @@
   .about-wrap {
     position: relative;
     background-color: #EDFAFF;
-    background-image: linear-gradient(33.5deg, transparent 35px, #D3F3FF 35px, #D3F3FF 37px, transparent 37px, transparent 118px, #D3F3FF 118px, #D3F3FF 120px, transparent 120px), linear-gradient(146.5deg, transparent 35px, #D3F3FF 35px, #D3F3FF 37px, transparent 37px, transparent 118px, #D3F3FF 118px, #D3F3FF 120px, transparent 120px);
-    background-size: 150px 100px; }
+    background-image: linear-gradient(29.6deg, transparent 41.5px, #D3F3FF 41.5px, #D3F3FF 43.5px, transparent 43.5px, transparent 126px, #D3F3FF 126px, #D3F3FF 128px, transparent 128px), linear-gradient(150.5deg, transparent 41.5px, #D3F3FF 41.5px, #D3F3FF 43.5px, transparent 43.5px, transparent 126px, #D3F3FF 126px, #D3F3FF 128px, transparent 128px);
+    background-size: 171px 97px; }
     .about-wrap__svg-start {
       position: absolute;
       left: 0;
@@ -1184,9 +1186,10 @@
     list-style: none;
     padding: 0;
     margin: 0; }
-  .conteiner {
+  .container {
     margin: 0 auto;
-    max-width: 1340px; }
+    max-width: 1480px;
+    padding: 70px; }
   .header {
     position: relative;
     color: white;
@@ -1261,10 +1264,11 @@
       align-items: flex-start; }
     .h-contact__tel--top {
       font-size: 24px;
+      line-height: 30px;
       font-weight: 700; }
     .h-contact__tel--middle {
       font-size: 36px;
-      line-height: 30px;
+      line-height: 36px;
       font-weight: 600;
       margin-left: 10px; }
   .general {
@@ -1275,10 +1279,12 @@
       text-align: center;
       margin: 100px 0; }
     .general__list {
-      display: flex;
+      display: inline-flex;
       flex-wrap: wrap;
       justify-content: space-around;
-      gap: 40px; }
+      align-content: center;
+      gap: 20px;
+      max-width: 1200px; }
     .general__link {
       font-weight: 700;
       font-size: 24px;
@@ -1304,8 +1310,8 @@
       padding-bottom: 10px; }
   .about-wrap {
     background-color: #EDFAFF;
-    background-image: linear-gradient(33.5deg, transparent 35px, #D3F3FF 35px, #D3F3FF 37px, transparent 37px, transparent 118px, #D3F3FF 118px, #D3F3FF 120px, transparent 120px), linear-gradient(146.5deg, transparent 35px, #D3F3FF 35px, #D3F3FF 37px, transparent 37px, transparent 118px, #D3F3FF 118px, #D3F3FF 120px, transparent 120px);
-    background-size: 150px 100px; }
+    background-image: linear-gradient(29.6deg, transparent 41.5px, #D3F3FF 41.5px, #D3F3FF 43.5px, transparent 43.5px, transparent 126px, #D3F3FF 126px, #D3F3FF 128px, transparent 128px), linear-gradient(150.5deg, transparent 41.5px, #D3F3FF 41.5px, #D3F3FF 43.5px, transparent 43.5px, transparent 126px, #D3F3FF 126px, #D3F3FF 128px, transparent 128px);
+    background-size: 171px 97px; }
     .about-wrap__svg-start {
       display: block;
       width: 100%;

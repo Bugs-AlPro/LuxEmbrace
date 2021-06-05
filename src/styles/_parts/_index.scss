@@ -1,18 +1,18 @@
 @font-face {
   font-family: 'Nunito';
-  src: local('Nunito Regular'), local('Nunito-Regular'), url('Nunitoregular.woff2') format('woff2'), url('Nunitoregular.woff') format('woff');
+  src: local('Nunito Regular'), local('Nunito-Regular'), url('../fonts/Nunitoregular.woff2') format('woff2'), url('../fonts/Nunitoregular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'Nunito';
-  src: local('Nunito Bold'), local('Nunito-Bold'), url('Nunitobold.woff2') format('woff2'), url('Nunitobold.woff') format('woff');
+  src: local('Nunito Bold'), local('Nunito-Bold'), url('../fonts/Nunitobold.woff2') format('woff2'), url('../fonts/Nunitobold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: 'Nunito';
-  src: local('Nunito SemiBold'), local('Nunito-SemiBold'), url('Nunitosemibold.woff2') format('woff2'), url('Nunitosemibold.woff') format('woff');
+  src: local('Nunito SemiBold'), local('Nunito-SemiBold'), url('../fonts/Nunitosemibold.woff2') format('woff2'), url('../fonts/Nunitosemibold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
 }
@@ -68,7 +68,7 @@
     padding: 0;
     margin: 0;
     }
-  .conteiner {
+  .container {
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -215,20 +215,20 @@
     position: relative;
     background-color: $background;
     background-image: 
-    // linear-gradient(0deg, red 1px, transparent 1px, transparent 99px, red 100px), 
-    // linear-gradient(90deg, red 1px, transparent 1px, transparent 149px, red 150px),
-    linear-gradient(33.5deg, 
-    transparent 35px, $background-line 35px, 
-    $background-line 37px, transparent 37px, 
-    transparent 118px, $background-line 118px, 
-    $background-line 120px, transparent 120px),
-    linear-gradient(146.5deg, 
-    transparent 35px, $background-line 35px, 
-    $background-line 37px, transparent 37px, 
-    transparent 118px, $background-line 118px, 
-    $background-line 120px, transparent 120px)
+    // linear-gradient(0deg,  transparent 48px, green 48px, green 49px, transparent 49px), 
+    // linear-gradient(90deg, transparent 85px, green 85px, green 86px, transparent 86px),
+    linear-gradient(29.6deg, 
+    transparent 41.5px, $background-line 41.5px, 
+    $background-line 43.5px, transparent 43.5px, 
+    transparent 126px, $background-line 126px, 
+    $background-line 128px, transparent 128px),
+    linear-gradient(150.5deg, 
+    transparent 41.5px, $background-line 41.5px, 
+    $background-line 43.5px, transparent 43.5px, 
+    transparent 126px, $background-line 126px, 
+    $background-line 128px, transparent 128px)
     ;
-    background-size: 150px 100px;
+    background-size: 171px 97px;
     &__svg-start {
       position: absolute;
       left: 0;
@@ -482,7 +482,7 @@
     padding: 0;
     margin: 0;
     }
-  .conteiner {
+  .container {
     margin: auto;
     padding: 0 70px;
   }
@@ -578,6 +578,7 @@
     }
     &__tel--top {
       font-size: 20px;
+      line-height: 26px;
       font-weight: 700;
     }
     &__tel--middle {
@@ -632,20 +633,20 @@
     position: relative;
     background-color: $background;
     background-image: 
-    // linear-gradient(0deg, red 1px, transparent 1px, transparent 99px, red 100px), 
-    // linear-gradient(90deg, red 1px, transparent 1px, transparent 149px, red 150px),
-    linear-gradient(33.5deg, 
-    transparent 35px, $background-line 35px, 
-    $background-line 37px, transparent 37px, 
-    transparent 118px, $background-line 118px, 
-    $background-line 120px, transparent 120px),
-    linear-gradient(146.5deg, 
-    transparent 35px, $background-line 35px, 
-    $background-line 37px, transparent 37px, 
-    transparent 118px, $background-line 118px, 
-    $background-line 120px, transparent 120px)
+    // linear-gradient(0deg,  transparent 48px, green 48px, green 49px, transparent 49px), 
+    // linear-gradient(90deg, transparent 85px, green 85px, green 86px, transparent 86px),
+    linear-gradient(29.6deg, 
+    transparent 41.5px, $background-line 41.5px, 
+    $background-line 43.5px, transparent 43.5px, 
+    transparent 126px, $background-line 126px, 
+    $background-line 128px, transparent 128px),
+    linear-gradient(150.5deg, 
+    transparent 41.5px, $background-line 41.5px, 
+    $background-line 43.5px, transparent 43.5px, 
+    transparent 126px, $background-line 126px, 
+    $background-line 128px, transparent 128px)
     ;
-    background-size: 150px 100px;
+    background-size: 171px 97px;
     &__svg-start {
       position: absolute;
       left: 0;
@@ -894,7 +895,7 @@
     padding: 0;
     margin: 0;
     }
-  .conteiner {
+  .container {
     margin: 0 auto;
     padding: 0 70px;
   }
@@ -987,6 +988,7 @@
     }
     &__tel--top {
       font-size: 20px;
+      line-height: 26px;
       font-weight: 700;
     }
     &__tel--middle {
@@ -1044,20 +1046,20 @@
     position: relative;
     background-color: $background;
     background-image: 
-    // linear-gradient(0deg, red 1px, transparent 1px, transparent 99px, red 100px), 
-    // linear-gradient(90deg, red 1px, transparent 1px, transparent 149px, red 150px),
-    linear-gradient(33.5deg, 
-    transparent 35px, $background-line 35px, 
-    $background-line 37px, transparent 37px, 
-    transparent 118px, $background-line 118px, 
-    $background-line 120px, transparent 120px),
-    linear-gradient(146.5deg, 
-    transparent 35px, $background-line 35px, 
-    $background-line 37px, transparent 37px, 
-    transparent 118px, $background-line 118px, 
-    $background-line 120px, transparent 120px)
+    // linear-gradient(0deg,  transparent 48px, green 48px, green 49px, transparent 49px), 
+    // linear-gradient(90deg, transparent 85px, green 85px, green 86px, transparent 86px),
+    linear-gradient(29.6deg, 
+    transparent 41.5px, $background-line 41.5px, 
+    $background-line 43.5px, transparent 43.5px, 
+    transparent 126px, $background-line 126px, 
+    $background-line 128px, transparent 128px),
+    linear-gradient(150.5deg, 
+    transparent 41.5px, $background-line 41.5px, 
+    $background-line 43.5px, transparent 43.5px, 
+    transparent 126px, $background-line 126px, 
+    $background-line 128px, transparent 128px)
     ;
-    background-size: 150px 100px;
+    background-size: 171px 97px;
     &__svg-start {
       position: absolute;
       left: 0;
@@ -1306,9 +1308,10 @@
     padding: 0;
     margin: 0;
     }
-  .conteiner {
+  .container {
     margin: 0 auto;
-    max-width: 1340px;
+    max-width: 1480px;
+    padding: 70px;
   }
   .header {
     position: relative;
@@ -1400,17 +1403,19 @@
     }
     &__tel--top {
       font-size: 24px;
+      line-height: 30px;
       font-weight: 700;
     }
     &__tel--middle {
       font-size: 36px;
-      line-height: 30px;
+      line-height: 36px;
       font-weight: 600;
       margin-left: 10px;
     }
   }
   .general {
     text-align: center;
+    
     &__title {
       font-size: 64px;
       font-weight: 400;
@@ -1418,10 +1423,12 @@
       margin: 100px 0;
     }
     &__list {
-      display: flex;
+      display: inline-flex;
       flex-wrap: wrap;
       justify-content: space-around;
-      gap: 40px;
+      align-content: center;
+      gap: 20px;
+      max-width: 1200px;
     }
     &__link {
       font-weight: 700;
@@ -1454,22 +1461,23 @@
     }
   }
   .about-wrap {
+    // margin-left: 15px;
     background-color: $background;
     background-image: 
-    // linear-gradient(0deg, red 1px, transparent 1px, transparent 99px, red 100px), 
-    // linear-gradient(90deg, red 1px, transparent 1px, transparent 149px, red 150px),
-    linear-gradient(33.5deg, 
-    transparent 35px, $background-line 35px, 
-    $background-line 37px, transparent 37px, 
-    transparent 118px, $background-line 118px, 
-    $background-line 120px, transparent 120px),
-    linear-gradient(146.5deg, 
-    transparent 35px, $background-line 35px, 
-    $background-line 37px, transparent 37px, 
-    transparent 118px, $background-line 118px, 
-    $background-line 120px, transparent 120px)
+    // linear-gradient(0deg,  transparent 48px, green 48px, green 49px, transparent 49px), 
+    // linear-gradient(90deg, transparent 85px, green 85px, green 86px, transparent 86px),
+    linear-gradient(29.6deg, 
+    transparent 41.5px, $background-line 41.5px, 
+    $background-line 43.5px, transparent 43.5px, 
+    transparent 126px, $background-line 126px, 
+    $background-line 128px, transparent 128px),
+    linear-gradient(150.5deg, 
+    transparent 41.5px, $background-line 41.5px, 
+    $background-line 43.5px, transparent 43.5px, 
+    transparent 126px, $background-line 126px, 
+    $background-line 128px, transparent 128px)
     ;
-    background-size: 150px 100px;
+    background-size: 171px 97px;
     &__svg-start {
       display: block;
       width: 100%;
