@@ -54,7 +54,7 @@
 
         {% for item in social %}
         <li class="h-contact__item">
-          <a href="{{ item.href }}" class="h-contact__link">
+          <a href="{{ item.href }}" class="h-contact__link" aria-label="{{ item.svgname }}">
             <svg class="svg" width="32px" height="32px">
               <use xlink:href='img/svg/sprite.svg#{{ item.svgname }}'></use>
             </svg>
